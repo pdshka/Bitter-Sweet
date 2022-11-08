@@ -4,31 +4,60 @@ using UnityEngine;
 
 public class RaySourceScript : MonoBehaviour
 {
-    public float rayDistance = 10f;
-    public Transform rayPoint;
     public LineRenderer lineRenderer;
-    // Start is called before the first frame update
+
+    public int reflections;
+    public float maxRayDistance;
+    public LayerMask layerDetection;
+
     void Start()
     {
-        
+        Physics2D.queriesStartInColliders = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 10f, Color.yellow);
-        RaycastHit2D hitObject = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), rayDistance);
+        lineRenderer.positionCount = 1;
+        lineRenderer.SetPosition(0, transform.position);
 
-        if (hitObject)
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, maxRayDistance, layerDetection);
+
+        bool isMirror = false;
+        Vector2 mirrorHitPoint = Vector2.zero;
+        Vector2 mirrorHitNormal = Vector2.zero;
+
+        for (int i = 0; i < reflections; i++)
         {
-            //    Debug.Log("hit: " + hit.collider.name);
-            lineRenderer.SetPosition(0, rayPoint.position);
-            lineRenderer.SetPosition(1, hitObject.point);
-        }
-        else
-        {
-            lineRenderer.SetPosition(0, rayPoint.position);
-            lineRenderer.SetPosition(1, rayPoint.position + rayPoint.right * rayDistance);
+            lineRenderer.positionCount += 1;
+
+            if (hitInfo.collider != null)
+            {
+                lineRenderer.SetPosition(lineRenderer.positionCount - 1, hitInfo.point);
+
+                isMirror = false;
+                if (hitInfo.collider.CompareTag("Mirror"))
+                {
+                    mirrorHitPoint = (Vector2)hitInfo.point;
+                    mirrorHitNormal = (Vector2)hitInfo.normal;
+                    hitInfo = Physics2D.Raycast((Vector2)hitInfo.point, Vector2.Reflect(hitInfo.point, hitInfo.normal), maxRayDistance, layerDetection);
+                    isMirror = true;
+                }
+                else
+                    break;
+            }
+            else
+            {
+                if (isMirror)
+                {
+                    lineRenderer.SetPosition(lineRenderer.positionCount - 1, mirrorHitPoint + Vector2.Reflect(mirrorHitPoint, mirrorHitNormal) * maxRayDistance);
+                    break;
+                }
+                else
+                {
+                    lineRenderer.SetPosition(lineRenderer.positionCount - 1, transform.position + transform.right * maxRayDistance);
+                    break;
+                }
+            }
         }
     }
 }
