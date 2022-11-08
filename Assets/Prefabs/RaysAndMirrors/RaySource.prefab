@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 3140894659103578894}
   reflections: 5
-  maxRayDistance: 20
+  maxRayDistance: 15
   layerDetection:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 115

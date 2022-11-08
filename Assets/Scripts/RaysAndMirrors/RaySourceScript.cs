@@ -63,7 +63,7 @@ public class RaySourceScript : MonoBehaviour
             {
                 if (isMirror)
                 {
-                    lineRenderer.SetPosition(lineRenderer.positionCount - 1, mirrorHitPoint + Vector2.Reflect(mirrorHitPoint, mirrorHitNormal).normalized * maxRayDistance);
+                    lineRenderer.SetPosition(lineRenderer.positionCount - 1, mirrorHitPoint + Vector2.Reflect(mirrorHitPoint, mirrorHitNormal) * maxRayDistance);
                     break;
                 }
                 else
