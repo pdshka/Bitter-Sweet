@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6145426729915528912}
   - component: {fileID: 6145426729915528913}
   - component: {fileID: 6145426729915528918}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Indicator
   m_TagString: RayReceiver
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 6145426730398083121}
   - component: {fileID: 6145426730398083126}
   - component: {fileID: 6145426730398083120}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: RayReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
