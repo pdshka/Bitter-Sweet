@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3140894659103578895}
   - component: {fileID: 3140894659103578894}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: lineRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 3140894659449467420}
   - component: {fileID: 2139426821616206671}
   - component: {fileID: 3140894659449467411}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RaySource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
