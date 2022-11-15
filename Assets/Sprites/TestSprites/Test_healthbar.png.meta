@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2fd483001fbedfd4b950cc66887622ed
+guid: 045c34c3451faa447b09a2540f5686f6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,106 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Test_player_MoveUp
+      name: Test_healthbar_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 66
-        width: 20
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 32
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c742a84f53d80bf40815cefeee387bad
-      internalID: 1618138511
+      spriteID: 75dc936d711eec546a68184c3636c015
+      internalID: 974779649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test_player_MoveLeft
+      name: Test_healthbar_2
       rect:
         serializedVersion: 2
-        x: 6
-        y: 34
-        width: 20
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 16
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a4795b2a681e4e43a373ed186ef5a2a
-      internalID: -1178150913
+      spriteID: ff2df0a010eb47e48b4b6fca2620f0d2
+      internalID: -946913880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test_player_Idle
+      name: Test_healthbar_3
       rect:
         serializedVersion: 2
-        x: 38
-        y: 34
-        width: 20
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f105b460d341bb48ba642896c14293e
-      internalID: -1453765645
+      spriteID: da8c1564063ad134fbcc6434848bdf64
+      internalID: -1350887574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test_player_MoveRight
+      name: Test_healthbar_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 34
-        width: 20
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 48
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d181656147603b4788a2a798dd4d97a
-      internalID: -892530307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Test_player_MoveDown
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 2
-        width: 20
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47f0a3719c2a28f40848b7c1614bef48
-      internalID: -158847453
+      spriteID: 2daead09ac4022b4c84ae85dfef66e42
+      internalID: -341314157
       vertices: []
       indices: 
       edges: []
@@ -220,11 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Test_player_Idle: -1453765645
-      Test_player_MoveDown: -158847453
-      Test_player_MoveRight: -892530307
-      Test_player_MoveLeft: -1178150913
-      Test_player_MoveUp: 1618138511
+      Test_healthbar_0: -341314157
+      Test_healthbar_2: -946913880
+      Test_healthbar_1: 974779649
+      Test_healthbar_3: -1350887574
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

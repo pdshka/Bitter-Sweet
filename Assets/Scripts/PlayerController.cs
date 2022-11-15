@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    private Stats stats;
     private Vector2 direction;
     private Rigidbody2D rb;
     private Animator animator;
 
     void Start()
     {
+        stats = GetComponent<Stats>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + direction * stats.speed * Time.fixedDeltaTime);
     }
 
 }
