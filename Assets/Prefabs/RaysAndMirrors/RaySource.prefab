@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036537041839967511}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: ee6c4f6368452db41a8914d9476e035f, type: 2}
+  beamWidth: 0.05
+  beamColor: {r: 0.97373635, g: 1, b: 0.37169808, a: 0.78431374}
 --- !u!1 &7782397535565627493
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class LaserBeam
 {
+    public float maxDistance = 15f;
     Vector3 pos, dir;
 
     GameObject laserObj;
     LineRenderer laser;
     List<Vector3> laserIndices = new List<Vector3>();
 
-    public LaserBeam(Vector3 pos, Vector3 dir, Material material)
+    public LaserBeam(Vector3 pos, Vector3 dir, Material material, float width, Color color)
     {
         this.laser = new LineRenderer();
         this.laserObj = new GameObject();
@@ -19,11 +20,11 @@ public class LaserBeam
         this.dir = dir;
 
         this.laser = this.laserObj.AddComponent(typeof(LineRenderer)) as LineRenderer;
-        this.laser.startWidth = 0.1f;
-        this.laser.endWidth = 0.1f;
+        this.laser.startWidth = width;
+        this.laser.endWidth = width;
         this.laser.material = material;
-        this.laser.startColor = Color.green;
-        this.laser.endColor = Color.green;
+        this.laser.startColor = color;
+        this.laser.endColor = color;
 
         CastRay(pos, dir, laser);
     }
@@ -33,7 +34,7 @@ public class LaserBeam
         laserIndices.Add(pos);
 
         Ray2D ray = new Ray2D(pos, dir);
-        RaycastHit2D hitInfo = Physics2D.Raycast(pos, dir);
+        RaycastHit2D hitInfo = Physics2D.Raycast(pos, dir, maxDistance);
 
         if(hitInfo.collider != null)
         {
@@ -41,7 +42,7 @@ public class LaserBeam
         }
         else
         {
-            laserIndices.Add(ray.GetPoint(30));
+            laserIndices.Add(ray.GetPoint(maxDistance));
             UpdateLaser();
         }
     }
