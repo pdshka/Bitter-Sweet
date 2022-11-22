@@ -20,4 +20,8 @@ public class Scenes : MonoBehaviour
     {
        Application.Quit();
     }
+    public void MainScene()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
 }
