@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CameraFollow2D : MonoBehaviour
 {
+    public float distanceFromPlayer;
     public float Speed;
     public GameObject Player;
     public GameObject Camera;
@@ -12,7 +13,7 @@ public class CameraFollow2D : MonoBehaviour
         {
             x = Player.transform.position.x,
             y = Player.transform.position.y,
-            z = Player.transform.position.z - 20,
+            z = Player.transform.position.z - distanceFromPlayer,
         };
         Camera.transform.position = Vector3.Lerp(Camera.transform.position, target, Speed * Time.fixedDeltaTime);
     }
