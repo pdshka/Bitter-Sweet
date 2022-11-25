@@ -5,6 +5,8 @@ using UnityEngine;
 public class RotationScript : MonoBehaviour
 {
     public bool playerIsNear = false;
+    [SerializeField]
+    private GameObject block;
 
     private void Update()
     {
@@ -12,7 +14,7 @@ public class RotationScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                transform.parent.Rotate(0, 0, 90);
+                block.transform.Rotate(0, 0, 90);
             }
         }
     }

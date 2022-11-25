@@ -34,7 +34,7 @@ public class LaserBeam
         laserIndices.Add(pos);
 
         Ray2D ray = new Ray2D(pos, dir);
-        RaycastHit2D hitInfo = Physics2D.Raycast(pos, dir, maxDistance);
+        RaycastHit2D hitInfo = Physics2D.Raycast(pos, dir, maxDistance, 1);
 
         if(hitInfo.collider != null)
         {
