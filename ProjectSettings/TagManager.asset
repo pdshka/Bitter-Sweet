@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mirror
   - RayReceiver
+  - Platform
   layers:
   - Default
   - TransparentFX

@@ -29,7 +29,25 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * stats.speed * Time.fixedDeltaTime);
+        transform.position = transform.position + new Vector3(direction.x, direction.y) * stats.speed * Time.fixedDeltaTime;
+        //rb.MovePosition(rb.position + direction * stats.speed * Time.fixedDeltaTime);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Platform")
+        {
+            Debug.Log("EnterPlatform");
+            this.transform.parent = collision.transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Platform")
+        {
+            Debug.Log("ExitPlatform");
+            this.transform.parent = null;
+        }
+    }
 }
