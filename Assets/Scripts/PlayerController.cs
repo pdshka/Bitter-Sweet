@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 direction;
     private Rigidbody2D rb;
     private Animator animator;
+    private int platformsCount = 0;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
         if (collision.tag == "Platform")
         {
             Debug.Log("EnterPlatform");
+            platformsCount++;
             this.transform.parent = collision.transform;
         }
     }
@@ -46,8 +48,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.tag == "Platform")
         {
+            platformsCount--;
             Debug.Log("ExitPlatform");
-            this.transform.parent = null;
+            if (platformsCount == 0)
+                this.transform.parent = null;
         }
     }
 }

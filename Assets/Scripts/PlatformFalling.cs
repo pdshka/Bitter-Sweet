@@ -25,5 +25,6 @@ public class PlatformFalling : MonoBehaviour
     {
         rb.isKinematic = false;
         rb.gravityScale = SpeedX;
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 }
