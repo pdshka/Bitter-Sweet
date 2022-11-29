@@ -12,7 +12,8 @@ public class PlatformFalling : MonoBehaviour
         rb.isKinematic = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    //private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name.Equals("Player"))
         {
@@ -24,5 +25,6 @@ public class PlatformFalling : MonoBehaviour
     {
         rb.isKinematic = false;
         rb.gravityScale = SpeedX;
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 }
