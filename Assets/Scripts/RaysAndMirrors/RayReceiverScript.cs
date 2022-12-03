@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class RayReceiverScript : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite activated;
+
     public void Activate()
     {
-        // TODO: logic when receiver activates
-        GetComponent<SpriteRenderer>().color = Color.green;
+        GetComponent<SpriteRenderer>().sprite = activated;
     }
 }
