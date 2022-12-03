@@ -49,13 +49,13 @@ public class RotationScript : MonoBehaviour
     {
         block.transform.Rotate(0, 0, -90);
         //rotation = (rotation + 1) % 4;
-        if (animator.GetInteger("rotation") == 0)
-        {
-            spriteRenderer.sortingOrder -= 2;
-        }
-        else if (animator.GetInteger("rotation") == 2)
+        if (animator.GetInteger("rotation") == 2)
         {
             spriteRenderer.sortingOrder += 2;
+        }
+        else if (animator.GetInteger("rotation") == 0)
+        {
+            spriteRenderer.sortingOrder -= 2;
         }
         //spriteRenderer.sprite = sprites[rotation];
         isRotating = false;
