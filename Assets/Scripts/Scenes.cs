@@ -24,9 +24,4 @@ public class Scenes : MonoBehaviour
     {
         SceneManager.LoadScene("MainScene");
     }
-    public void Menu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
-    }
 }
