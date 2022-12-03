@@ -477,8 +477,8 @@ TextureImporter:
       name: mirrorbox_17
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
+        x: 249
+        y: 69
         width: 32
         height: 32
       alignment: 0
@@ -603,8 +603,8 @@ TextureImporter:
       name: mirrorbox_23
       rect:
         serializedVersion: 2
-        x: 256
-        y: 16
+        x: 255
+        y: 17
         width: 32
         height: 32
       alignment: 0
@@ -631,7 +631,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mirrorbox_6: -1811933043
+      mirrorbox_20: -1520949643
       mirrorbox_0: 1208539967
       mirrorbox_9: -1041387229
       mirrorbox_17: -1901470247
@@ -654,7 +654,7 @@ TextureImporter:
       mirrorbox_14: -1799419308
       mirrorbox_13: -68150040
       mirrorbox_19: 568298355
-      mirrorbox_20: -1520949643
+      mirrorbox_6: -1811933043
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
