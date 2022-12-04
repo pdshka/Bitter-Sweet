@@ -17,14 +17,14 @@ public class PlatformFalling : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("Player"))
         {
-            //Invoke("FallPlatform" ,3f);
-            GameObject.FindGameObjectWithTag("Player").transform.parent = null;
+            Invoke("FallPlatform" ,4f);
+            //GameObject.FindGameObjectWithTag("Player").transform.parent = null;
             Destroy(gameObject, 6f);
         }
     }
     void FallPlatform()
     {
-        rb.isKinematic = false;
+        //rb.isKinematic = false;
         rb.gravityScale = SpeedX;
         GetComponent<BoxCollider2D>().enabled = false;
     }
