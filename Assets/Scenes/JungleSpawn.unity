@@ -221,7 +221,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -421,6 +421,22 @@ PrefabInstance:
     - target: {fileID: 150005655286262610, guid: f38212c84399bc64cb692b29d909433b, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150005655286262611, guid: f38212c84399bc64cb692b29d909433b, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0173993
+      objectReference: {fileID: 0}
+    - target: {fileID: 150005655286262611, guid: f38212c84399bc64cb692b29d909433b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0094385
+      objectReference: {fileID: 0}
+    - target: {fileID: 150005655286262611, guid: f38212c84399bc64cb692b29d909433b, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0039799213
+      objectReference: {fileID: 0}
+    - target: {fileID: 150005655286262611, guid: f38212c84399bc64cb692b29d909433b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.12735987
       objectReference: {fileID: 0}
     - target: {fileID: 150005655286262613, guid: f38212c84399bc64cb692b29d909433b, type: 3}
       propertyPath: m_LocalPosition.x

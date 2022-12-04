@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JungleSpawn.unity
     guid: 83b2646a878f7334ab65e9fbcd1c15f1
+  - enabled: 1
+    path: Assets/Scenes/WaterTemple.unity
+    guid: 21dda8ac422bb1c4c8411289a3f163d2
   m_configObjects: {}
