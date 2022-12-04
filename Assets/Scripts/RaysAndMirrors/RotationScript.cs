@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RotationScript : MonoBehaviour
 {
-    public bool playerIsNear = false;
+    public bool rotationOn = true;
+    private bool playerIsNear = false;
     [SerializeField]
     private GameObject block;
     //[SerializeField]
@@ -26,7 +27,7 @@ public class RotationScript : MonoBehaviour
     {
         if (playerIsNear)
         {
-            if (Input.GetKeyDown(KeyCode.R) && !isRotating)
+            if (Input.GetKeyDown(KeyCode.R) && rotationOn && !isRotating)
             {
                 isRotating = true;
                 Debug.Log((animator.GetInteger("rotation") + 1) % 4);
