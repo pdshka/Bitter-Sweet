@@ -17,7 +17,7 @@ public class PlatformFalling : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("Player"))
         {
-            Invoke("FallPlatform" ,3f);
+            //Invoke("FallPlatform" ,3f);
             Destroy(gameObject, 6f);
         }
     }
