@@ -10,6 +10,7 @@ public class PlatformChoise : MonoBehaviour
 
     public int k = 8;                             // Количество "труб" -1   для массива
     public GameObject[] obj = new GameObject[9];
+    public GameObject finish;
 
 
 
@@ -190,9 +191,19 @@ public class PlatformChoise : MonoBehaviour
     {
        
         if (k0 == 1 && k1 == 3 && k3 == 1 && k4 == 2 && k6 == 2 && k7 == 1 && k8 == 1)  // Проверка правильного положения труб для прохождения уровня
-            {
+        {
+            obj[0].GetComponentInChildren<Animator>().SetBool("water", true);
+            obj[1].GetComponentInChildren<Animator>().SetBool("water", true);
+            obj[3].GetComponentInChildren<Animator>().SetBool("water", true);
+            obj[4].GetComponentInChildren<Animator>().SetBool("water", true);
+            obj[6].GetComponentInChildren<Animator>().SetBool("water", true);
+            obj[7].GetComponentInChildren<Animator>().SetBool("water", true);
+            obj[8].GetComponentInChildren<Animator>().SetBool("water", true);
+            finish.GetComponent<Animator>().SetBool("water", true);
+            this.enabled = false;
+
             Debug.Log("Уровень пройден");
-            }
+        }
 
 
 

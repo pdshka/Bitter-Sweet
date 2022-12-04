@@ -2038,6 +2038,7 @@ MonoBehaviour:
   - {fileID: 555802437}
   - {fileID: 1624376321}
   - {fileID: 1100640611}
+  finish: {fileID: 1251301532}
 --- !u!1 &1815767320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,6 +2106,7 @@ MonoBehaviour:
   - {fileID: 555802437}
   - {fileID: 1624376321}
   - {fileID: 1100640611}
+  finish: {fileID: 1251301532}
 --- !u!1 &1916522296
 GameObject:
   m_ObjectHideFlags: 0
