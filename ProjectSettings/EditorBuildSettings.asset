@@ -15,6 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: a23c82f1337e84f419be07bd37153455
   - enabled: 1
+    path: Assets/Scenes/RaysPuzzles/RaysPuzzle6.unity
+    guid: bc862d9fe16ecc34885a9384d3dbb714
+  - enabled: 1
+    path: Assets/Scenes/RaysPuzzles/RaysPuzzle5.unity
+    guid: 594c94c04824266478d2c0aebb876432
+  - enabled: 1
+    path: Assets/Scenes/RaysPuzzles/RaysPuzzle4.unity
+    guid: 0afeeb47b39a2d141a857faec9673694
+  - enabled: 1
+    path: Assets/Scenes/RaysPuzzles/RaysPuzzle3.unity
+    guid: 094d89a2b8981364f969040a566a20df
+  - enabled: 1
+    path: Assets/Scenes/RaysPuzzles/RaysPuzzle2.unity
+    guid: c2db8005dfa42a14f867f866327421d2
+  - enabled: 1
     path: Assets/Scenes/OrchidMaze.unity
     guid: 9dec66546cf39df4db1abcfd81254491
   - enabled: 1
@@ -23,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WaterTemple.unity
     guid: 21dda8ac422bb1c4c8411289a3f163d2
+  - enabled: 1
+    path: Assets/Scenes/RaysPuzzles/RaysPuzzle1.unity
+    guid: f05c678b7877e29419e0038f54eec880
   m_configObjects: {}
