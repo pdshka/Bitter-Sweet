@@ -26,6 +26,8 @@ public class LaserBeam
         this.laser.startColor = color;
         this.laser.endColor = color;
 
+        this.laser.sortingOrder = 1;
+
         CastRay(pos, dir, laser);
     }
 
