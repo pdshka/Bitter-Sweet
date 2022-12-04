@@ -3080,7 +3080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b72b272faa24645a06df338aa11785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 0}
+  respawnPoint: {fileID: 1805638774}
 --- !u!61 &874549649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3172,7 +3172,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &915008930
 PrefabInstance:
@@ -3659,7 +3659,7 @@ Transform:
   - {fileID: 1410464968}
   - {fileID: 790890031}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1195036254
 PrefabInstance:
@@ -6349,6 +6349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f38212c84399bc64cb692b29d909433b, type: 3}
+--- !u!4 &1805638774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 150005655339897398, guid: f38212c84399bc64cb692b29d909433b, type: 3}
+  m_PrefabInstance: {fileID: 1805638773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1810404624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6370,7 +6375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819344125464974427, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 819344125464974427, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
       propertyPath: m_AnchorMax.x
