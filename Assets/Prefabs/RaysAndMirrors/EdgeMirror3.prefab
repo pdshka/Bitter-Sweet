@@ -286,7 +286,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 568298355, guid: 9ab86e4d8cedd964a8cd8036e9bfc8be, type: 3}
+  m_Sprite: {fileID: -68150040, guid: 9ab86e4d8cedd964a8cd8036e9bfc8be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -307,7 +307,7 @@ Animator:
   m_GameObject: {fileID: 8293893037653627322}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d96e70bf73926d14ca9f92180245c4fe, type: 2}
+  m_Controller: {fileID: 9100000, guid: f1be0aa6c5759bc4c91c9282b3251f37, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -341,7 +341,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8293893037801453722}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -349,7 +349,7 @@ Transform:
   - {fileID: 8293893038110046018}
   m_Father: {fileID: 6939304932368071846}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &8293893037801453723
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -444,7 +444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6939304932368071846}
   m_Layer: 0
-  m_Name: EdgeMirror
+  m_Name: EdgeMirror3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -159,7 +159,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 390, y: 270, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 3246292885098766638}
+  m_DefaultState: {fileID: -7935242645768983398}
 --- !u!1102 &-2884464632235036213
 AnimatorState:
   serializedVersion: 6
@@ -193,13 +193,13 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EdgeMirror
+  m_Name: EdgeMirror3
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: rotation
     m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 1
+    m_DefaultInt: 3
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
