@@ -13,11 +13,13 @@ public class RotationScript : MonoBehaviour
     //private int rotation = 0;
     private Animator animator;
     private bool isRotating = false;
+    private int defaultOrderInLayer;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        defaultOrderInLayer = spriteRenderer.sortingOrder;
     }
 
     private void Update()
@@ -49,13 +51,22 @@ public class RotationScript : MonoBehaviour
     {
         block.transform.Rotate(0, 0, -90);
         //rotation = (rotation + 1) % 4;
-        if (animator.GetInteger("rotation") == 2)
+        switch(animator.GetInteger("rotation"))
         {
-            spriteRenderer.sortingOrder += 2;
-        }
-        else if (animator.GetInteger("rotation") == 0)
-        {
-            spriteRenderer.sortingOrder -= 2;
+            case 0:
+                spriteRenderer.sortingOrder = defaultOrderInLayer;
+                break;
+            case 1:
+                spriteRenderer.sortingOrder = defaultOrderInLayer;
+                break;
+            case 2:
+                spriteRenderer.sortingOrder = defaultOrderInLayer + 2;
+                break;
+            case 3:
+                spriteRenderer.sortingOrder = defaultOrderInLayer + 2;
+                break;
+            default:
+                break;
         }
         //spriteRenderer.sprite = sprites[rotation];
         isRotating = false;
