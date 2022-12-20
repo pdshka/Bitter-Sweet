@@ -1911,6 +1911,7 @@ GameObject:
   - component: {fileID: 940543456}
   - component: {fileID: 940543460}
   - component: {fileID: 940543461}
+  - component: {fileID: 940543462}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -2115,6 +2116,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &940543462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940543455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b26331baab7e614584888ff2fdd9025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 276cfbb93a3471049a7dcae23c231752, type: 2}
+  dropDown: {fileID: 1798192861}
+  slider: {fileID: 1221901510}
 --- !u!1 &1201119657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,6 +2294,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
         m_MethodName: SetVolume
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 940543462}
+        m_TargetAssemblyTypeName: Preferences, Assembly-CSharp
+        m_MethodName: SaveSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3054,6 +3082,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1798192864}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
         m_MethodName: ChangeResolution
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 940543462}
+        m_TargetAssemblyTypeName: Preferences, Assembly-CSharp
+        m_MethodName: SaveResolution
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
