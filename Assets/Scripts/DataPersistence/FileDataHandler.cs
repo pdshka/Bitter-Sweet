@@ -8,11 +8,14 @@ public class FileDataHandler
 {
     private string dataDirPath = "";
     private string dataFileName = "";
+    private bool useEncryption = false;
+    private readonly string encryptionCodeWord = "bttrswt";
 
-    public FileDataHandler(string dataDirPath, string dataFileName)
+    public FileDataHandler(string dataDirPath, string dataFileName, bool useEncryption)
     {
         this.dataDirPath = dataDirPath;
         this.dataFileName = dataFileName;
+        this.useEncryption = useEncryption;
     }
 
     public GameData Load()
@@ -31,6 +34,12 @@ public class FileDataHandler
                     {
                         dataToLoad = sr.ReadToEnd();
                     }
+                }
+
+                // optionally encrypt the data
+                if (useEncryption)
+                {
+                    dataToLoad = EncryptDecrypt(dataToLoad);
                 }
 
                 // deserialize
@@ -55,6 +64,12 @@ public class FileDataHandler
             // serialize game data
             string dataToStore = JsonUtility.ToJson(gameData, true);
 
+            // optionally encrypt the data
+            if (useEncryption)
+            {
+                dataToStore = EncryptDecrypt(dataToStore);
+            }
+
             // write serialized data to file
             using (FileStream fs = new FileStream(fullPath, FileMode.Create))
             {
@@ -68,5 +83,15 @@ public class FileDataHandler
         {
             Debug.LogError("Error while saving: " + fullPath + "\n" + e);
         }
+    }
+
+    private string EncryptDecrypt(string data)
+    {
+        string modifiedData = "";
+        for(int i = 0; i < data.Length; i++)
+        {
+            modifiedData += (char)(data[i] ^ encryptionCodeWord[i % encryptionCodeWord.Length]);
+        }
+        return modifiedData;
     }
 }
