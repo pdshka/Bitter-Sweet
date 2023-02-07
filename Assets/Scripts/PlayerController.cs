@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDataPersistence
 {
     private Stats stats;
     private Vector2 direction;
@@ -15,6 +15,16 @@ public class PlayerController : MonoBehaviour
         stats = GetComponent<Stats>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        this.transform.position = gameData.playerPosition;
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.playerPosition = this.transform.position;
     }
 
     private void Update()
