@@ -2206,6 +2206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RayReceiver
       objectReference: {fileID: 0}
+    - target: {fileID: 6863766205008896773, guid: e4d848d145cb0cd44b3023ad253b8471, type: 3}
+      propertyPath: id
+      value: 3fb541da-1f04-4845-97ac-19bff2242b7a
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4d848d145cb0cd44b3023ad253b8471, type: 3}
 --- !u!1001 &1269526646
