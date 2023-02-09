@@ -5,6 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneTeleporter : MonoBehaviour
 {
+    [SerializeField]
+    private string id;
+    [SerializeField]
+    private string toID;
+    [ContextMenu("Generate guid for id")]
+    private void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
+
     private bool playerIsNear = false;
     public string sceneName;
 
@@ -14,6 +24,7 @@ public class SceneTeleporter : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().UseTeleport(toID);
                 Teleport();
             }
         }

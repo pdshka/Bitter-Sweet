@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour, IDataPersistence
 {
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     private Rigidbody2D rb;
     private Animator animator;
     private int platformsCount = 0;
+    private bool usedTeleporter = false;
+    private string teleportToId = "";
 
     void Start()
     {
@@ -24,7 +27,14 @@ public class PlayerController : MonoBehaviour, IDataPersistence
 
     public void SaveData(ref GameData gameData)
     {
-        gameData.playerPosition = this.transform.position;
+        if (usedTeleporter)
+        {
+            gameData.playerPosition = gameData.teleporters[teleportToId];
+        }
+        else
+        {
+            gameData.playerPosition = this.transform.position;
+        }
     }
 
     private void Update()
@@ -63,5 +73,11 @@ public class PlayerController : MonoBehaviour, IDataPersistence
             if (platformsCount == 0)
                 this.transform.parent = null;
         }
+    }
+
+    public void UseTeleport(string tpTo)
+    {
+        usedTeleporter = true;
+        teleportToId = tpTo;
     }
 }
