@@ -3152,7 +3152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409e0d98906a4b34398a35221121912c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  continueGameButton: {fileID: 0}
+  continueGameButton: {fileID: 1391681176}
 --- !u!4 &1507230832
 Transform:
   m_ObjectHideFlags: 0
@@ -3767,6 +3767,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2949921893292676950, guid: f45a4e4973880764a9d72d7ad9674288, type: 3}
+      propertyPath: useEncryption
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2949921893292676951, guid: f45a4e4973880764a9d72d7ad9674288, type: 3}
       propertyPath: m_RootOrder
       value: 4
