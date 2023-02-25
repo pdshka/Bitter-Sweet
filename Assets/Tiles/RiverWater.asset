@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: RiverWater
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: 32dd774c457815c458980615f3187c9a, type: 3}
+  - {fileID: 21300000, guid: 5988cf6067a3a4d499825afbe0414396, type: 3}
+  - {fileID: 21300000, guid: f6d0ec532c9c9c54e8dc611dae7b2cba, type: 3}
+  - {fileID: 21300000, guid: 69f950cbe9b3c1f4f89861bc99f4c561, type: 3}
+  - {fileID: 21300000, guid: db77dd71695b3ea45bb478f21da67a70, type: 3}
+  - {fileID: 21300000, guid: c346b6df6479a9a4a87e353f569dff5c, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0

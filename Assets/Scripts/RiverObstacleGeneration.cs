@@ -64,7 +64,9 @@ public class RiverObstacleGeneration : MonoBehaviour
     {
         currentObstaclesCount++;
         currentObstaclesOnScreen++;
-        Vector3 pos = spawnPositions[random.Next(0, spawnPositions.Length)].position;
+        //Vector3 pos = spawnPositions[random.Next(0, spawnPositions.Length)].position;
+        float x = Random.Range(spawnPositions[0].position.x, spawnPositions[2].position.x);
+        Vector3 pos = new Vector3(x, spawnPositions[0].position.y, 0);
         Instantiate(obstacles[random.Next(0, obstacles.Length)], pos, Quaternion.identity);
 
     }
