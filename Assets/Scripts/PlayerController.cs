@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool yEnabled = true;
     private Stats stats;
     private Vector2 direction;
     private Rigidbody2D rb;
@@ -20,7 +21,8 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         direction.x = Input.GetAxisRaw("Horizontal");
-        direction.y = Input.GetAxisRaw("Vertical");
+        if (yEnabled)
+            direction.y = Input.GetAxisRaw("Vertical");
         direction.Normalize();
 
         animator.SetFloat("Horizontal", direction.x);
