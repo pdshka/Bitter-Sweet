@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RiverObstacleGeneration : MonoBehaviour
 {
+    [SerializeField]
     private int obstaclesToFinish = 10;
+    private int currentObstaclesCount = 0;
+    [SerializeField]
     private int maxObstaclesOnScreen = 2;
     public int currentObstaclesOnScreen = 0;
 
@@ -13,10 +17,13 @@ public class RiverObstacleGeneration : MonoBehaviour
     [SerializeField]
     private GameObject[] obstacles;
 
-    private float reloadTime = 4f;
+    private float reloadTime = 1f;
     private bool isReloading = false;
 
     private System.Random random;
+    private bool finished = false;
+
+    public GameObject win;
 
     private void Start()
     {
@@ -25,9 +32,20 @@ public class RiverObstacleGeneration : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!finished)
+        {
+            if (currentObstaclesCount == obstaclesToFinish)
+            {
+                if (currentObstaclesOnScreen == 0)
+                {
+                    StartCoroutine(PlayCutscene());
+                }
+            }
+        }
+
         if (!isReloading)
         {
-            if (currentObstaclesOnScreen < maxObstaclesOnScreen)
+            if ((currentObstaclesOnScreen < maxObstaclesOnScreen) && (currentObstaclesCount < obstaclesToFinish))
             {
                 CreateObstacle();
                 StartCoroutine(Reload());
@@ -35,18 +53,27 @@ public class RiverObstacleGeneration : MonoBehaviour
         }
     }
 
-    IEnumerator Reload()
+    private IEnumerator Reload()
     {
         isReloading = true;
         yield return new WaitForSeconds(reloadTime);
         isReloading = false;
     }
 
-    void CreateObstacle()
+    private void CreateObstacle()
     {
+        currentObstaclesCount++;
         currentObstaclesOnScreen++;
         Vector3 pos = spawnPositions[random.Next(0, spawnPositions.Length)].position;
         Instantiate(obstacles[random.Next(0, obstacles.Length)], pos, Quaternion.identity);
 
+    }
+
+    private IEnumerator PlayCutscene()
+    {
+        finished = true;
+        win.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
