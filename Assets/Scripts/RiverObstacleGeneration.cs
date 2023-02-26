@@ -13,7 +13,9 @@ public class RiverObstacleGeneration : MonoBehaviour
     public int currentObstaclesOnScreen = 0;
 
     [SerializeField]
-    private Transform[] spawnPositions;
+    private Transform leftBorder;
+    [SerializeField]
+    private Transform rightBorder;
     [SerializeField]
     private GameObject[] obstacles;
 
@@ -24,10 +26,12 @@ public class RiverObstacleGeneration : MonoBehaviour
     private bool finished = false;
 
     public GameObject win;
+    private GameObject player;
 
     private void Start()
     {
         random = new System.Random();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void FixedUpdate()
@@ -65,8 +69,9 @@ public class RiverObstacleGeneration : MonoBehaviour
         currentObstaclesCount++;
         currentObstaclesOnScreen++;
         //Vector3 pos = spawnPositions[random.Next(0, spawnPositions.Length)].position;
-        float x = Random.Range(spawnPositions[0].position.x, spawnPositions[2].position.x);
-        Vector3 pos = new Vector3(x, spawnPositions[0].position.y, 0);
+        //float x = Random.Range(leftBorder.position.x, rightBorder.position.x);
+        float x = player.transform.position.x;
+        Vector3 pos = new Vector3(x, leftBorder.position.y, 0);
         Instantiate(obstacles[random.Next(0, obstacles.Length)], pos, Quaternion.identity);
 
     }
