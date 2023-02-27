@@ -32,13 +32,14 @@ public class RiverObstacleGeneration : MonoBehaviour
     {
         random = new System.Random();
         player = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(Reload(3f));
     }
 
     private void FixedUpdate()
     {
         if (!finished)
         {
-            if (currentObstaclesCount == obstaclesToFinish)
+            if (currentObstaclesCount >= obstaclesToFinish)
             {
                 if (currentObstaclesOnScreen == 0)
                 {
@@ -52,12 +53,12 @@ public class RiverObstacleGeneration : MonoBehaviour
             if ((currentObstaclesOnScreen < maxObstaclesOnScreen) && (currentObstaclesCount < obstaclesToFinish))
             {
                 CreateObstacle();
-                StartCoroutine(Reload());
+                StartCoroutine(Reload(reloadTime));
             }
         }
     }
 
-    private IEnumerator Reload()
+    private IEnumerator Reload(float reloadTime)
     {
         isReloading = true;
         yield return new WaitForSeconds(reloadTime);
@@ -70,10 +71,28 @@ public class RiverObstacleGeneration : MonoBehaviour
         currentObstaclesOnScreen++;
         //Vector3 pos = spawnPositions[random.Next(0, spawnPositions.Length)].position;
         //float x = Random.Range(leftBorder.position.x, rightBorder.position.x);
-        float x = player.transform.position.x;
+        //float x = player.transform.position.x;
+        float x = Random.Range(player.transform.position.x - 1, player.transform.position.x + 1);
+        if (x < leftBorder.position.x)
+            x = leftBorder.position.x;
+        else if (x > rightBorder.position.x)
+            x = rightBorder.position.x;
         Vector3 pos = new Vector3(x, leftBorder.position.y, 0);
-        Instantiate(obstacles[random.Next(0, obstacles.Length)], pos, Quaternion.identity);
+        int spawned_obstacle_num = random.Next(0, obstacles.Length);
+        Instantiate(obstacles[spawned_obstacle_num], pos, Quaternion.identity);
 
+        int gen_second = random.Next(3);
+        if (gen_second > 0)
+        {
+            currentObstaclesCount++;
+            currentObstaclesOnScreen++;
+            x = Random.Range(leftBorder.position.x, rightBorder.position.x);
+            pos = new Vector3(x, leftBorder.position.y, 0);
+            int new_obstacle_num = spawned_obstacle_num;
+            while (new_obstacle_num == spawned_obstacle_num)
+                new_obstacle_num = random.Next(0, obstacles.Length);
+            Instantiate(obstacles[new_obstacle_num], pos, Quaternion.identity);
+        }
     }
 
     private IEnumerator PlayCutscene()
