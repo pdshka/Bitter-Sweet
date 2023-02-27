@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 
 public class RiverObstacleGeneration : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class RiverObstacleGeneration : MonoBehaviour
     private System.Random random;
     private bool finished = false;
 
-    public GameObject win;
+    public GameObject cutscene;
     private GameObject player;
 
     private void Start()
@@ -98,8 +99,8 @@ public class RiverObstacleGeneration : MonoBehaviour
     private IEnumerator PlayCutscene()
     {
         finished = true;
-        win.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        cutscene.GetComponent<PlayableDirector>().Play();
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("WaterTemple");
     }
 }
