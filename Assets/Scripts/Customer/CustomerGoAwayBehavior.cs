@@ -2,38 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomerGoUpToDeskBehavior : StateMachineBehaviour
+public class CustomerGoAwayBehavior : StateMachineBehaviour
 {
     private float speed;
-    private Transform otherCustomerCheck;
-    private LayerMask customerMask;
-    private Transform orderPoint;
+    private Transform exitPoint;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         speed = animator.GetComponent<Customer>().speed;
-        otherCustomerCheck = animator.GetComponent<Customer>().otherCustomerCheck;
-        customerMask = animator.GetComponent<Customer>().customerMask;
-        orderPoint = GameObject.Find("OrderPoint").transform;
+        exitPoint = GameObject.Find("SpawnPoint").transform;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (animator.transform.position.y + speed * Time.fixedDeltaTime > orderPoint.position.y)
+        if (animator.transform.position.y - speed * Time.fixedDeltaTime < exitPoint.position.y)
         {
-            animator.SetBool("Waiting", true);
+            GameObject.Find("CustomerManager").GetComponent<CustomerSpawner>().currentCustomersOnScreen--;
+            Destroy(animator.gameObject);
         }
-
-        if (!Physics2D.OverlapPoint(otherCustomerCheck.position, customerMask))
-        {
-            animator.transform.position = animator.transform.position + new Vector3(0, 1, 0) * speed * Time.fixedDeltaTime;
-        }
-        else
-        {
-            animator.SetBool("StayingInQueue", true);
-        }
+        animator.transform.position = animator.transform.position - new Vector3(0, 1, 0) * speed * Time.fixedDeltaTime;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

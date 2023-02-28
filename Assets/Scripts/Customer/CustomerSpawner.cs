@@ -14,16 +14,20 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField]
     private float realodTime;
     private bool isReloading;
+    public bool cafeClosed;
 
     void FixedUpdate()
     {
-        if (!isReloading)
+        if (!cafeClosed)
         {
-            if (currentCustomersOnScreen < maxCustomersOnScreen)
+            if (!isReloading)
             {
-                currentCustomersOnScreen++;
-                GameObject c = Instantiate(customer, spawnPoint.position, Quaternion.identity) as GameObject;
-                StartCoroutine(Reload(realodTime));
+                if (currentCustomersOnScreen < maxCustomersOnScreen)
+                {
+                    currentCustomersOnScreen++;
+                    GameObject c = Instantiate(customer, spawnPoint.position, Quaternion.identity) as GameObject;
+                    StartCoroutine(Reload(realodTime));
+                }
             }
         }
     }
