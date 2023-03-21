@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDataPersistence
 {
     public bool yEnabled = true;
     private Stats stats;
@@ -10,12 +11,31 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private int platformsCount = 0;
+    private bool usedTeleporter = false;
+    private string teleportToId = "";
 
     void Start()
     {
         stats = GetComponent<Stats>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        this.transform.position = gameData.playerPosition;
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        if (usedTeleporter)
+        {
+            gameData.playerPosition = gameData.teleporters[teleportToId];
+        }
+        else
+        {
+            gameData.playerPosition = this.transform.position;
+        }
     }
 
     private void Update()
@@ -55,5 +75,11 @@ public class PlayerController : MonoBehaviour
             if (platformsCount == 0)
                 this.transform.parent = null;
         }
+    }
+
+    public void UseTeleport(string tpTo)
+    {
+        usedTeleporter = true;
+        teleportToId = tpTo;
     }
 }

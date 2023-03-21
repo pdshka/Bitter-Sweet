@@ -2102,6 +2102,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 150005655286262608, guid: f38212c84399bc64cb692b29d909433b, type: 3}
+      propertyPath: id
+      value: 3e8c9c2a-5992-43e2-8387-5a4b0fcb0eac
+      objectReference: {fileID: 0}
+    - target: {fileID: 150005655286262608, guid: f38212c84399bc64cb692b29d909433b, type: 3}
+      propertyPath: toID
+      value: a48c36e9-f8c3-4ae7-a3c8-c465333108f2
+      objectReference: {fileID: 0}
+    - target: {fileID: 150005655286262608, guid: f38212c84399bc64cb692b29d909433b, type: 3}
       propertyPath: sceneName
       value: OrchidMaze
       objectReference: {fileID: 0}
@@ -3719,6 +3727,10 @@ PrefabInstance:
     - target: {fileID: 6145426730398083127, guid: e4d848d145cb0cd44b3023ad253b8471, type: 3}
       propertyPath: m_Name
       value: RayReceiver
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863766205008896773, guid: e4d848d145cb0cd44b3023ad253b8471, type: 3}
+      propertyPath: id
+      value: 8b5dbb34-68ec-4922-8b28-1e52d15a8a98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4d848d145cb0cd44b3023ad253b8471, type: 3}
