@@ -168,6 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73886ca0d5257f443ae798b641e62f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue:
+    name: "\u041C\u043E\u0451 \u0438\u043C\u044F"
+    node: {fileID: 11400000, guid: 64d3050c8d168a14b8efa45d740415c4, type: 2}
   DM: {fileID: 1102115201}
   text: {fileID: 228982271}
 --- !u!61 &3519132
@@ -368,7 +371,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228982271}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -450,7 +453,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Press
+  m_Text: 'Press E
 
 '
 --- !u!222 &228982275
@@ -1030,6 +1033,7 @@ MonoBehaviour:
   - {fileID: 420520372}
   - {fileID: 1497370507}
   - {fileID: 399241893}
+  dialogueStarted: 0
 --- !u!4 &1102115202
 Transform:
   m_ObjectHideFlags: 0

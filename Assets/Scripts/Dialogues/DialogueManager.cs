@@ -12,12 +12,14 @@ public class DialogueManager : MonoBehaviour
     private Queue<DialogueNode> nodes;
     public GameObject[] AnswerButtons;
     private DialogueNode currentNode;
+    public bool dialogueStarted;
 
     private void Start()
     {
         nodes = new Queue<DialogueNode>();
         BoxDialogue.SetActive(false);
         nextNodeEnabled = false;
+        dialogueStarted = false;
     }
 
     private void Update()
@@ -34,6 +36,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         DisableButtons();
+        dialogueStarted = true;
         nextNodeEnabled = false;
         BoxDialogue.SetActive(true);
         NameText.text = dialogue.name;
@@ -99,6 +102,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        dialogueStarted = false;
         nextNodeEnabled = false;
         foreach (var ansBtn in AnswerButtons)
             ansBtn.SetActive(false);
