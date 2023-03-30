@@ -9,7 +9,8 @@ public class CustomerSpawner : MonoBehaviour
     public int maxCustomersOnScreen;
     public int currentCustomersOnScreen;
     [SerializeField]
-    private GameObject customer;
+    private GameObject[] customers;
+    public int firstSortingOrder = 1;
 
     [SerializeField]
     private float realodTime;
@@ -25,7 +26,8 @@ public class CustomerSpawner : MonoBehaviour
                 if (currentCustomersOnScreen < maxCustomersOnScreen)
                 {
                     currentCustomersOnScreen++;
-                    GameObject c = Instantiate(customer, spawnPoint.position, Quaternion.identity) as GameObject;
+                    GameObject c = Instantiate(customers[Random.RandomRange(0, customers.Length)], spawnPoint.position, Quaternion.identity) as GameObject;
+                    c.GetComponent<SpriteRenderer>().sortingOrder = firstSortingOrder++;
                     StartCoroutine(Reload(realodTime));
                 }
             }

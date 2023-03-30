@@ -155,7 +155,11 @@ MonoBehaviour:
   spawnPoint: {fileID: 995001633}
   maxCustomersOnScreen: 4
   currentCustomersOnScreen: 0
-  customer: {fileID: 3360718025005898965, guid: cfc6a07db34c99b4fbeb12ad6e374ec0, type: 3}
+  customers:
+  - {fileID: 3360718025005898965, guid: 3f34e378bc03bc1438a60b5457a32115, type: 3}
+  - {fileID: 3360718025005898965, guid: 463b60b5adce0334b968a0a05c5a8462, type: 3}
+  - {fileID: 3360718025005898965, guid: 7879115b9ffc61d408f70c6913bb8a90, type: 3}
+  firstSortingOrder: 1
   realodTime: 5
   cafeClosed: 0
 --- !u!4 &133307022
