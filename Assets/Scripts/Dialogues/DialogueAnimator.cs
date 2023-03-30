@@ -4,11 +4,26 @@ using UnityEngine;
 
 public class DialogueAnimator : MonoBehaviour
 {
+    public Dialogue dialogue;
     public DialogueManager DM;
     public GameObject text;
     private void Start()
     {
         text.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (text.active)
+            {
+                if (!DM.dialogueStarted)
+                {
+                    DM.StartDialogue(dialogue);
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
