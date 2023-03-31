@@ -11,15 +11,32 @@ public class CrossZero : MonoBehaviour
     public Button button; // шаблон клетки
     public float offset; // расстояние между клетками
     public RectTransform panel; // пустой RectTransform, относительно которого будет сборка
+    public GameObject hint; // подсказка о начале игры
 
     private Button[] myButtons;
     private int index;
     private int[,] grid;
     private int hor, ver;
     private int horLast, verLast;
+    private bool gameStarted;
 
     void Start()
     {
+       
+    }
+
+    private void Update()
+    {
+        if(hint.activeSelf && Input.GetKeyDown(KeyCode.E) && !gameStarted)
+        {
+            StartGame();
+        }
+    }
+
+    private void StartGame()
+    {
+        gameStarted = true;
+        panel.gameObject.SetActive(true);
         newGame.onClick.AddListener(() => { GetNew(); });
         BuildGrid();
         GetNew();
@@ -33,7 +50,8 @@ public class CrossZero : MonoBehaviour
         horLast = 100;
         verLast = 100;
         winText.text = string.Empty;
-        index = Random.Range(0, 2);
+        //index = Random.Range(0, 2);
+        index = 0;
         SetInfo(index);
         foreach (Button b in myButtons)
         {

@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject[] AnswerButtons;
     private DialogueNode currentNode;
     public bool dialogueStarted;
+    public bool dialogueEnded;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class DialogueManager : MonoBehaviour
         BoxDialogue.SetActive(false);
         nextNodeEnabled = false;
         dialogueStarted = false;
+        dialogueEnded = false;
     }
 
     private void Update()
@@ -102,6 +104,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        dialogueEnded = true;
         dialogueStarted = false;
         nextNodeEnabled = false;
         foreach (var ansBtn in AnswerButtons)
