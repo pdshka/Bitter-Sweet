@@ -49,6 +49,10 @@ public class Thimblerig : MonoBehaviour
     private int win;
     private bool gamewin = false;
     private bool PlayerIsNear = false;
+
+    [SerializeField]
+    private MonkeyData monkey;
+
     private void Start()
     {
 
@@ -180,6 +184,8 @@ public class Thimblerig : MonoBehaviour
                 coconut[i].SetActive(false);
                 Buttons[i].SetActive(false);
             }
+
+            StartCoroutine(MonkeyPassed());
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -200,6 +206,12 @@ public class Thimblerig : MonoBehaviour
             On = false;
             hint.SetActive(false);
         }
+    }
+
+    private IEnumerator MonkeyPassed()
+    {
+        yield return new WaitForSeconds(2f);
+        monkey.CompleteMinigame();
     }
 }
 
