@@ -559,27 +559,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3394511358892716979, guid: 889087a8da4f4e64a96a6ac910f993e7, type: 3}
   m_PrefabInstance: {fileID: 429775107}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &897399428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5838562593917260830, guid: 3e6df8f398f8b89419c5db36518735c0, type: 3}
-  m_PrefabInstance: {fileID: 845797966}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &897399434
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897399428}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!224 &897399435 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5838562593917260826, guid: 3e6df8f398f8b89419c5db36518735c0, type: 3}
@@ -590,6 +569,40 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 819344125464974427, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
   m_PrefabInstance: {fileID: 1663927551}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1449842585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4757052466869271509, guid: 65e6efe30fb3b6547b4bd43fdc7ad1d9, type: 3}
+  m_PrefabInstance: {fileID: 7745905810222507322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1449842586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449842585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d4ac17652e6994cb1b7865a467df3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hint: {fileID: 2131345338}
+--- !u!58 &1449842587
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449842585}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1001 &1663927551
 PrefabInstance:
   m_ObjectHideFlags: 0

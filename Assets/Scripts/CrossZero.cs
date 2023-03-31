@@ -50,7 +50,8 @@ public class CrossZero : MonoBehaviour
         horLast = 100;
         verLast = 100;
         winText.text = string.Empty;
-        index = Random.Range(0, 2);
+        //index = Random.Range(0, 2);
+        index = 0;
         SetInfo(index);
         foreach (Button b in myButtons)
         {

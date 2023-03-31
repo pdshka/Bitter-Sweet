@@ -85,19 +85,19 @@ public class Rockpaperscissors : MonoBehaviour
         if (v == Variants.Rock)
         {
             //TextElement.text = "Ничья";
-            MonkeyImg.sprite = playersprites[(int)Variants.Rock];
+            MonkeyImg.sprite = monkeysprites[(int)Variants.Rock];
         }
         else if (v == Variants.Scissors)
         {
             //TextElement.text = "Вы выиграли этот раунд";
             PlayerScore += 1;
-            MonkeyImg.sprite = playersprites[(int)Variants.Scissors];
+            MonkeyImg.sprite = monkeysprites[(int)Variants.Scissors];
         }
         else
         {
             //TextElement.text = "Вы проиграли этот раунд";
             MonkeyScore += 1;
-            MonkeyImg.sprite = playersprites[(int)Variants.Paper];
+            MonkeyImg.sprite = monkeysprites[(int)Variants.Paper];
         }
         CheckWinOrLose();
 
@@ -109,39 +109,40 @@ public class Rockpaperscissors : MonoBehaviour
         if (v == Variants.Scissors)
         {
             //TextElement.text = "Ничья";
-            MonkeyImg.sprite = playersprites[(int)Variants.Scissors];
+            MonkeyImg.sprite = monkeysprites[(int)Variants.Scissors];
         }
         else if (v == Variants.Paper)
         {
             //TextElement.text = "Вы выиграли этот раунд";
             PlayerScore += 1;
-            MonkeyImg.sprite = playersprites[(int)Variants.Paper];
+            MonkeyImg.sprite = monkeysprites[(int)Variants.Paper];
         }
         else
         {
             //TextElement.text = "Вы проиграли этот раунд";
             MonkeyScore += 1;
-            MonkeyImg.sprite = playersprites[(int)Variants.Rock];
+            MonkeyImg.sprite = monkeysprites[(int)Variants.Rock];
         }
         CheckWinOrLose();
     }
     void paper()
     {
+        PlayerImg.sprite = playersprites[(int)Variants.Paper];
         var v = (Variants)rnd.Next(3);
         if (v == Variants.Paper)
         {
             //TextElement.text = "Ничья";
-            MonkeyImg.sprite = playersprites[(int)Variants.Paper];
+            MonkeyImg.sprite = monkeysprites[(int)Variants.Paper];
         }
         else if (v == Variants.Rock)
         {
-            MonkeyImg.sprite = playersprites[(int)Variants.Rock];
+            MonkeyImg.sprite = monkeysprites[(int)Variants.Rock];
             //TextElement.text = "Вы выиграли этот раунд";
             PlayerScore += 1;
         }
         else
         {
-            MonkeyImg.sprite = playersprites[(int)Variants.Scissors];
+            MonkeyImg.sprite = monkeysprites[(int)Variants.Scissors];
             //TextElement.text = "Вы проиграли этот раунд";
             MonkeyScore += 1;
         }
