@@ -185,7 +185,7 @@ public class Thimblerig : MonoBehaviour
                 Buttons[i].SetActive(false);
             }
 
-            StartCoroutine(MonkeyPassed());
+            StartCoroutine(CompleteMinigame());
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -208,7 +208,7 @@ public class Thimblerig : MonoBehaviour
         }
     }
 
-    private IEnumerator MonkeyPassed()
+    private IEnumerator CompleteMinigame()
     {
         yield return new WaitForSeconds(2f);
         monkey.CompleteMinigame();

@@ -47,6 +47,10 @@ public class Rockpaperscissors : MonoBehaviour
         Scissors,
         Paper
     }
+
+    [SerializeField]
+    private MonkeyData monkey;
+
     private void Update()
     {
         if (!On && Input.GetKeyDown(KeyCode.E) && playerIsNear && !win)
@@ -160,6 +164,7 @@ public class Rockpaperscissors : MonoBehaviour
             TextElement.text = "Вы выиграли";
             panel.transform.GetChild(10).gameObject.SetActive(true);
             win = true;
+            StartCoroutine(CompleteMinigame());
         }
         else if (MonkeyScore == 3)
         {
@@ -206,5 +211,11 @@ public class Rockpaperscissors : MonoBehaviour
         PlayerScore = 0;
         PScore.text = "0";
         MScore.text = "0";
+    }
+
+    private IEnumerator CompleteMinigame()
+    {
+        yield return new WaitForSeconds(2f);
+        monkey.CompleteMinigame();
     }
 }
