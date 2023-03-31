@@ -45,5 +45,10 @@ public class GameData
         teleporters.Add("75970152-940d-461e-bc97-9d0d115ce9b1", new Vector3(-10.5f, 0.5f, 0)); // Jungle-MonkeyCoconuts
         teleporters.Add("d0ffc720-58c3-4db8-9594-646087819af9", new Vector3(-0.5f, 0.5f, 0)); // MonkeyCoconuts-Jungle 
         teleporters.Add("a63fe7d3-c232-45a1-affb-20dbaf88b7a9", new Vector3(6.5f, 0.5f, 0)); //MonkeyCoconuts-MonkeyTicTacToe
+        teleporters.Add("0521ed4b-6d76-47ac-9f8b-c63e1fcd5837", new Vector3(-0.5f, 0.5f, 0)); // MonkeyTicTacToe-MonkeyCoconuts
+        teleporters.Add("a321e93f-df27-484c-b48b-7444d66dc86d", new Vector3(6.5f, 0.5f, 0)); // MonkeyTicTacToe-MonkeyRockPaperScissors
+        teleporters.Add("4fe64a98-af2a-4c44-8573-32a45c3522b8", new Vector3(-0.5f, 0.5f, 0)); // MonkeyRockPaperScissors-MonkeyTicTacToe
+        teleporters.Add("ae4e55a3-f012-47cc-a2a4-a917a34d8678", new Vector3(6.5f, 0.5f, 0)); // MonkeyRockPaperScissors-MonkeyDialogue
+        teleporters.Add("92d05804-1ed5-4a2b-a635-1f83c8eeecbd", new Vector3(-0.5f, 0.5f, 0)); // MonkeyDialogue-MonkeyRockPaperScissors
     }
 }

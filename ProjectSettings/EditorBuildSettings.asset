@@ -47,4 +47,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MonkeyGames/MonkeyCoconuts.unity
     guid: 052a72d6ae8984447b92e2b55905e980
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGames/MonkeyTicTacToe.unity
+    guid: 1fbd49c76d1860a489766d9853b3fa1c
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGames/MonkeyRockPaperScissors.unity
+    guid: fe3d96720ec2fa74199532fabb184d9d
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGames/MonkeyDialogue.unity
+    guid: ef9d089d45ca8f24abccf05efa9e37b8
   m_configObjects: {}
