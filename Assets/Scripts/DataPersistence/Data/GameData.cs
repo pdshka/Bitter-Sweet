@@ -9,6 +9,7 @@ public class GameData
     public Vector3 playerPosition;
     public SerializableDictionary<string, bool> rayRecieversActivated;
     public SerializableDictionary<string, Vector3> teleporters;
+    public SerializableDictionary<string, bool> teleportersActivated;
 
     // initializing default values
     public GameData()
@@ -17,6 +18,7 @@ public class GameData
         this.playerPosition = Vector3.zero;
         this.rayRecieversActivated = new SerializableDictionary<string, bool>();
         SetTeleporters();
+        this.teleportersActivated = new SerializableDictionary<string, bool>();
     }
 
     private void SetTeleporters()
