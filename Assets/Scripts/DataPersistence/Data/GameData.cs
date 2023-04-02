@@ -57,5 +57,8 @@ public class GameData
         teleporters.Add("83b8a602-8c84-4e1c-b799-e9a33bdb8f18", new Vector3(15.5f, 29.5f, 0)); // WaterTemple-SmallPipes2
         teleporters.Add("37358e64-d1d2-44dc-a5c1-3ee2c9ad185e", new Vector3(-12.5f, 22.5f, 0)); // WaterTemple-BigPipes1
         teleporters.Add("a77582c5-c4c5-4a55-bf2e-a18a1a801b64", new Vector3(11.5f, 22.5f, 0)); // WaterTemple-BigPipes2
+        teleporters.Add("86dcb7be-5035-4f6f-a620-6854b767d6b7", new Vector3(-2.5f, 2.5f, 0)); // SmallPipes2-WaterTemple
+        teleporters.Add("555cdd08-dd8b-4f2e-866b-093318e82527", new Vector3(-3.5f, 5.5f, 0)); // BigPipes1-WaterTemple
+        teleporters.Add("e25f85ca-50d5-4f11-ab59-e5f1a2503d59", new Vector3(-3.5f, 3.5f, 0)); // BigPipes2-WaterTemple
     }
 }
