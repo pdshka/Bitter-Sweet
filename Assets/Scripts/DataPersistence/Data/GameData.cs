@@ -47,13 +47,13 @@ public class GameData
         teleporters.Add("15068248-d126-4cb2-be68-d2c3a6fc60f2", new Vector3(-2.5f, 3.5f, 0)); // Rays4-Maze
         teleporters.Add("28692330-cade-41a3-9adf-b6e41a047331", new Vector3(-3, 6, 0)); // Rays5-Maze
         teleporters.Add("75970152-940d-461e-bc97-9d0d115ce9b1", new Vector3(-10.5f, 0.5f, 0)); // Jungle-MonkeyCoconuts
-        teleporters.Add("d0ffc720-58c3-4db8-9594-646087819af9", new Vector3(-0.5f, 0.5f, 0)); // MonkeyCoconuts-Jungle 
-        teleporters.Add("a63fe7d3-c232-45a1-affb-20dbaf88b7a9", new Vector3(6.5f, 0.5f, 0)); //MonkeyCoconuts-MonkeyTicTacToe
-        teleporters.Add("0521ed4b-6d76-47ac-9f8b-c63e1fcd5837", new Vector3(-0.5f, 0.5f, 0)); // MonkeyTicTacToe-MonkeyCoconuts
-        teleporters.Add("a321e93f-df27-484c-b48b-7444d66dc86d", new Vector3(6.5f, 0.5f, 0)); // MonkeyTicTacToe-MonkeyRockPaperScissors
-        teleporters.Add("4fe64a98-af2a-4c44-8573-32a45c3522b8", new Vector3(-0.5f, 0.5f, 0)); // MonkeyRockPaperScissors-MonkeyTicTacToe
-        teleporters.Add("ae4e55a3-f012-47cc-a2a4-a917a34d8678", new Vector3(6.5f, 0.5f, 0)); // MonkeyRockPaperScissors-MonkeyDialogue
-        teleporters.Add("92d05804-1ed5-4a2b-a635-1f83c8eeecbd", new Vector3(-0.5f, 0.5f, 0)); // MonkeyDialogue-MonkeyRockPaperScissors
+        teleporters.Add("d0ffc720-58c3-4db8-9594-646087819af9", new Vector3(-1.9f, -10.2f, 0)); // MonkeyCoconuts-Jungle 
+        teleporters.Add("a63fe7d3-c232-45a1-affb-20dbaf88b7a9", new Vector3(3f, 3.2f, 0)); //MonkeyCoconuts-MonkeyTicTacToe
+        teleporters.Add("0521ed4b-6d76-47ac-9f8b-c63e1fcd5837", new Vector3(15.3f, -9.1f, 0)); // MonkeyTicTacToe-MonkeyCoconuts
+        teleporters.Add("a321e93f-df27-484c-b48b-7444d66dc86d", new Vector3(3.15f, 2.1f, 0)); // MonkeyTicTacToe-MonkeyRockPaperScissors
+        teleporters.Add("4fe64a98-af2a-4c44-8573-32a45c3522b8", new Vector3(3.5f, -9.7f, 0)); // MonkeyRockPaperScissors-MonkeyTicTacToe
+        teleporters.Add("ae4e55a3-f012-47cc-a2a4-a917a34d8678", new Vector3(-0.4f, 0.4f, 0)); // MonkeyRockPaperScissors-MonkeyDialogue
+        teleporters.Add("92d05804-1ed5-4a2b-a635-1f83c8eeecbd", new Vector3(-1.6f, 0.4f, 0)); // MonkeyDialogue-MonkeyRockPaperScissors
         teleporters.Add("83b8a602-8c84-4e1c-b799-e9a33bdb8f18", new Vector3(15.5f, 29.5f, 0)); // WaterTemple-SmallPipes2
         teleporters.Add("37358e64-d1d2-44dc-a5c1-3ee2c9ad185e", new Vector3(-12.5f, 22.5f, 0)); // WaterTemple-BigPipes1
         teleporters.Add("a77582c5-c4c5-4a55-bf2e-a18a1a801b64", new Vector3(11.5f, 22.5f, 0)); // WaterTemple-BigPipes2
