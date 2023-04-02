@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad0a91baec3b324ca192698a34b845d, type: 3}
   m_Name: 6.2
   m_EditorClassIdentifier: 
-  text: 
-  answers: []
-  nextNode: []
+  text: "\u041F\u0430\u043F\u0430?.. \u041F\u0430\u043F\u0430...\r\n"
+  answers:
+  - "\u042F \u0436\u0435 \u0433\u043E\u0432\u043E\u0440\u0438\u043B\u0430..."
+  nextNode:
+  - {fileID: 11400000, guid: 35b59343236f6e34abce71c9811fa23a, type: 2}

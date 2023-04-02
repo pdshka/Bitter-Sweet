@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad0a91baec3b324ca192698a34b845d, type: 3}
   m_Name: New DialogueNode
   m_EditorClassIdentifier: 
-  text: 
-  answers: []
-  nextNode: []
+  text: "\u0432\u0432\u0432\u0432\u0432\u0432\u0432"
+  answers:
+  - "\u0432\u044B\u044B"
+  - "\u043C\u043C\u0430\u0430\u0432"
+  nextNode:
+  - {fileID: 0}
