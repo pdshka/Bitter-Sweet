@@ -104,11 +104,13 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        dialogueEnded = true;
-        dialogueStarted = false;
+        if (dialogueStarted)
+        {
+            dialogueEnded = true;
+            dialogueStarted = false;
+        }
         nextNodeEnabled = false;
-        foreach (var ansBtn in AnswerButtons)
-            ansBtn.SetActive(false);
+        DisableButtons();
         BoxDialogue.SetActive(false);
     }
 

@@ -20,6 +20,7 @@ public class DialogueAnimator : MonoBehaviour
             {
                 if (!DM.dialogueStarted)
                 {
+                    text.SetActive(false);
                     DM.StartDialogue(dialogue);
                 }
             }
