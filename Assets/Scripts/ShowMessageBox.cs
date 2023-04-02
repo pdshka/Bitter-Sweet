@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Unity.VisualScripting;
-using UnityEditor.UI;
+//using UnityEditor.UI;
 
 public class ShowMessageBox : MonoBehaviour
 {
@@ -15,8 +15,8 @@ public class ShowMessageBox : MonoBehaviour
     private GameObject MessageBox;
     [SerializeField]
     private GameObject hint;
-    [SerializeField]
-    private ImageEditor imageobj;
+    //[SerializeField]
+    //private ImageEditor imageobj;
     public string[] HintText = { "test1", "test2", "test3", "test4" };
     private bool FirstAid = true;
     private bool playerIsNear = false;

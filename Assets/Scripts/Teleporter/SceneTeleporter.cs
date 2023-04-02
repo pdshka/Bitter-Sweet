@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneTeleporter : MonoBehaviour
+public class SceneTeleporter : MonoBehaviour, IDataPersistence
 {
+    public bool isActivated = true;
+
     [SerializeField]
-    private string id;
+    public string id;
     [SerializeField]
     private string toID;
     [ContextMenu("Generate guid for id")]
@@ -17,12 +19,20 @@ public class SceneTeleporter : MonoBehaviour
 
     private bool playerIsNear = false;
     public string sceneName;
+    [SerializeField]
+    private GameObject hint;
+
+    private void Start()
+    {
+        hint.SetActive(false);
+        GetComponent<Animator>().SetBool("isActivated", isActivated);
+    }
 
     private void Update()
     {
         if (playerIsNear)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && isActivated)
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().UseTeleport(toID);
                 Teleport();
@@ -45,5 +55,30 @@ public class SceneTeleporter : MonoBehaviour
     private void Teleport()
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        if (gameData.teleportersActivated.ContainsKey(id))
+        {
+            isActivated = gameData.teleportersActivated[id];
+        }
+
+        if (isActivated)
+        {
+            Activate();
+        }
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.teleportersActivated[id] = isActivated;
+    }
+
+    public void Activate()
+    {
+        isActivated = true;
+        hint.SetActive(true);
+        GetComponent<Animator>().SetBool("isActivated", true);
     }
 }

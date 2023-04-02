@@ -23,7 +23,8 @@ public class PlayerController : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData gameData)
     {
-        this.transform.position = gameData.playerPosition;
+        if (SceneManager.GetActiveScene().name != "RiverRace")
+            this.transform.position = gameData.playerPosition;
     }
 
     public void SaveData(ref GameData gameData)
