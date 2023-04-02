@@ -59,4 +59,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RiverRace.unity
     guid: a0e9d6c7e16492d459cd4df06f37d505
+  - enabled: 1
+    path: Assets/Scenes/Pipes/BigPipes1.unity
+    guid: 0cd18b6230feead4e8fea3626d763177
+  - enabled: 1
+    path: Assets/Scenes/Pipes/SmallPipes2.unity
+    guid: eb3aeb18d16575a458d02f9f780ae81c
+  - enabled: 1
+    path: Assets/Scenes/Pipes/BigPipes2.unity
+    guid: 34e552b3e26b41d408028bdbbceb3e50
   m_configObjects: {}

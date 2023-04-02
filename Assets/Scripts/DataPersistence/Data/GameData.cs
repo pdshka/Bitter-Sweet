@@ -31,7 +31,7 @@ public class GameData
         teleporters.Add("08635aab-e008-46ef-8f9c-8762ee8030dd", new Vector3(1.5f, -6.5f, 0f)); // Jungle-Maze
         teleporters.Add("2ecc4656-b196-420e-87ce-910543c7cafc", new Vector3(0.5f, 9f, 0f)); // Jungle-WaterTemple
         teleporters.Add("5da5dfb1-abb4-45e6-9b73-7035e50bc49d", new Vector3(-0.5f, -8.5f, 0f)); // WaterTemple-Jungle
-        teleporters.Add("ea251a03-822a-4c40-92dd-3cea989fe827", new Vector3(-0.5f, 7.5f, 0f)); // WaterTemple-Pipes
+        teleporters.Add("ea251a03-822a-4c40-92dd-3cea989fe827", new Vector3(-16.5f, 29.5f, 0f)); // WaterTemple-Pipes
         teleporters.Add("edcf78b8-8005-4c43-bb60-5a78cc5fe010", new Vector3(-11.5f, 4.5f, 0f)); // Pipes-WaterTemple
         teleporters.Add("cb4f543d-a40e-4983-be7f-96acb46e4b6d", new Vector3(-0.5f, 2.5f, 0f)); // Maze-Jungle
         teleporters.Add("a48c36e9-f8c3-4ae7-a3c8-c465333108f2", new Vector3(-20.5f, -38f, 0f)); // Maze-Rays6
@@ -54,5 +54,8 @@ public class GameData
         teleporters.Add("4fe64a98-af2a-4c44-8573-32a45c3522b8", new Vector3(-0.5f, 0.5f, 0)); // MonkeyRockPaperScissors-MonkeyTicTacToe
         teleporters.Add("ae4e55a3-f012-47cc-a2a4-a917a34d8678", new Vector3(6.5f, 0.5f, 0)); // MonkeyRockPaperScissors-MonkeyDialogue
         teleporters.Add("92d05804-1ed5-4a2b-a635-1f83c8eeecbd", new Vector3(-0.5f, 0.5f, 0)); // MonkeyDialogue-MonkeyRockPaperScissors
+        teleporters.Add("83b8a602-8c84-4e1c-b799-e9a33bdb8f18", new Vector3(15.5f, 29.5f, 0)); // WaterTemple-SmallPipes2
+        teleporters.Add("37358e64-d1d2-44dc-a5c1-3ee2c9ad185e", new Vector3(-12.5f, 22.5f, 0)); // WaterTemple-BigPipes1
+        teleporters.Add("a77582c5-c4c5-4a55-bf2e-a18a1a801b64", new Vector3(11.5f, 22.5f, 0)); // WaterTemple-BigPipes2
     }
 }
