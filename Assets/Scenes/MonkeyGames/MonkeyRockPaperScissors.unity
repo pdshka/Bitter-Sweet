@@ -1757,7 +1757,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1420348203}
   - {fileID: 353639721}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -3303,17 +3302,12 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!224 &1420348203 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 819344125464974427, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
-  m_PrefabInstance: {fileID: 1663927551}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1663927551
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 445741309}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 819344125464974375, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
       propertyPath: m_Name
@@ -3329,7 +3323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819344125464974427, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 819344125464974427, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
       propertyPath: m_AnchorMax.x
