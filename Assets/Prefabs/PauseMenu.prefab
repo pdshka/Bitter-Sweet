@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 276cfbb93a3471049a7dcae23c231752, type: 2}
-  dropDown: {fileID: 0}
+  dropDown: {fileID: 819344125075885064}
 --- !u!82 &1123835573733392319
 AudioSource:
   m_ObjectHideFlags: 0
@@ -517,6 +517,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 276cfbb93a3471049a7dcae23c231752, type: 2}
   dropDown: {fileID: 819344125075885064}
   slider: {fileID: 819344126536992635}
+  settingsMenu: {fileID: 819344125464974375}
 --- !u!1 &819344125676451390
 GameObject:
   m_ObjectHideFlags: 0

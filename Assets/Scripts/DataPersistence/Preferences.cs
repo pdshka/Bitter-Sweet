@@ -12,6 +12,8 @@ public class Preferences : MonoBehaviour
     private Dropdown dropDown;
     [SerializeField]
     private Slider slider;
+    [SerializeField]
+    private GameObject settingsMenu;
 
     private void Start()
     {
@@ -36,7 +38,8 @@ public class Preferences : MonoBehaviour
     {
         float volume = PlayerPrefs.GetFloat("volume");
         slider.value = volume;
-        audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
+        //audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
+        settingsMenu.GetComponent<SettingsMenu>().SetVolume(volume);
         Debug.Log("Sound loaded");
     }
 
@@ -52,7 +55,8 @@ public class Preferences : MonoBehaviour
         dropDown.value = dropDownValue;
         int width = PlayerPrefs.GetInt("resolutionWidth");
         int height = PlayerPrefs.GetInt("resolutionHeight");
-        Screen.SetResolution(width, height, true);
+        //Screen.SetResolution(width, height, true);
+        settingsMenu.GetComponent<SettingsMenu>().ChangeResolution();
         Debug.Log("Resolution loaded");
     }
 
