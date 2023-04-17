@@ -363,7 +363,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1420348203}
   - {fileID: 353639721}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1388,11 +1387,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 150005655339897385, guid: f38212c84399bc64cb692b29d909433b, type: 3}
   m_PrefabInstance: {fileID: 45814004}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &1420348203 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 819344125464974427, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
-  m_PrefabInstance: {fileID: 1663927551}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1508572441
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,7 +2196,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 445741309}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 819344125464974375, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
       propertyPath: m_Name
@@ -2218,7 +2212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819344125464974427, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 819344125464974427, guid: 8a97029d28aa6cb46b6adb814a0109f5, type: 3}
       propertyPath: m_AnchorMax.x
