@@ -11,6 +11,7 @@ public class GameData
     public SerializableDictionary<string, Vector3> teleporters;
     public SerializableDictionary<string, bool> teleportersActivated;
     public SerializableDictionary<string, bool> monkeysPassed;
+    public SerializableDictionary<string, bool> fruitsCollected;
 
     // initializing default values
     public GameData()
@@ -21,6 +22,7 @@ public class GameData
         SetTeleporters();
         this.teleportersActivated = new SerializableDictionary<string, bool>();
         this.monkeysPassed = new SerializableDictionary<string, bool>();
+        this.fruitsCollected = new SerializableDictionary<string, bool>();
     }
 
     private void SetTeleporters()
