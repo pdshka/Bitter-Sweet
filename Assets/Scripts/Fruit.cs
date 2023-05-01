@@ -49,7 +49,7 @@ public class Fruit : MonoBehaviour, IDataPersistence
     {
         if (gameData.fruitsCollected.ContainsKey(id))
         {
-            isCollected = gameData.teleportersActivated[id];
+            isCollected = gameData.fruitsCollected[id];
         }
 
         if (isCollected)
