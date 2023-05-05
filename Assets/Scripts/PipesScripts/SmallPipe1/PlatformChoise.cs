@@ -370,7 +370,7 @@ public class PlatformChoise : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData gameData)
     {
-        if (gameData.pipesCompleted.ContainsKey("Pipes"))
+        if (gameData.pipesCompleted.ContainsKey("Pipes") && gameData.pipesCompleted["Pipes"])
         {
             this.enabled = false;
         }

@@ -639,7 +639,7 @@ public class BigPipe1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData gameData)
     {
-        if (gameData.pipesCompleted.ContainsKey("BigPipes1"))
+        if (gameData.pipesCompleted.ContainsKey("BigPipes1") && gameData.pipesCompleted["BigPipes1"])
         {
             this.enabled = false;
         }
