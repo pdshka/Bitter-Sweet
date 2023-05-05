@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // Выбор куба на WASD и его поворот на стрелочки, логика.
 
-public class PlatformChoise : MonoBehaviour
+public class PlatformChoise : MonoBehaviour, IDataPersistence
 {                                                  // Константы 
     private int k0, k1, k3, k4, k6, k7, k8 = 0;
     private int Chain = 0;
@@ -366,5 +366,18 @@ public class PlatformChoise : MonoBehaviour
                 k1 = 3;
             }
         }
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        if (gameData.pipesCompleted.ContainsKey("Pipes"))
+        {
+            this.enabled = false;
+        }
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.pipesCompleted["Pipes"] = this.enabled;
     }
 }

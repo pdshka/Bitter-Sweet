@@ -331,7 +331,7 @@ public class SmallPipe2 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData gameData)
     {
-        if (gameData.pipesCompleted.ContainsKey("SmallPipe2"))
+        if (gameData.pipesCompleted.ContainsKey("SmallPipes2"))
         {
             this.enabled = false;
         }
@@ -339,7 +339,7 @@ public class SmallPipe2 : MonoBehaviour, IDataPersistence
 
     public void SaveData(ref GameData gameData)
     {
-        gameData.pipesCompleted["SmallPipe2"] = this.enabled;
+        gameData.pipesCompleted["SmallPipes2"] = this.enabled;
     }
 }
 
