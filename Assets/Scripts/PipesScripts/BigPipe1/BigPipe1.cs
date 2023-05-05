@@ -341,20 +341,7 @@ public class BigPipe1 : MonoBehaviour, IDataPersistence
        
         if (k0 == 3 && k1 == 0 && k2 == 3 && k6 == 0 && k7 == 0 && k8 == 3 && k9 == 0 && k15 == 2 && k4 == 0 && k5 == 1 && k11 == 1)  // ѕроверка правильного положени€ труб дл€ прохождени€ уровн€
             {
-            completed = true;
-            obj[0].GetComponent<Animator>().SetBool("water", true);
-            obj[1].GetComponent<Animator>().SetBool("water", true);
-            obj[2].GetComponent<Animator>().SetBool("water", true);
-            obj[6].GetComponent<Animator>().SetBool("water", true);
-            obj[7].GetComponent<Animator>().SetBool("water", true);
-            obj[8].GetComponent<Animator>().SetBool("water", true);
-            obj[9].GetComponent<Animator>().SetBool("water", true);
-            obj[15].GetComponent<Animator>().SetBool("water", true);
-            obj[4].GetComponent<Animator>().SetBool("water", true);
-            obj[5].GetComponent<Animator>().SetBool("water", true);
-            obj[11].GetComponent<Animator>().SetBool("water", true);
-            finish.GetComponent<Animator>().SetBool("water", true);
-            this.enabled = false;
+            ActivateWater();
 
             Debug.Log("”ровень пройден");
             }
@@ -638,12 +625,35 @@ public class BigPipe1 : MonoBehaviour, IDataPersistence
         }
     }
 
+    public void ActivateWater()
+    {
+        completed = true;
+        obj[0].GetComponent<Animator>().SetBool("water", true);
+        obj[1].GetComponent<Animator>().SetBool("water", true);
+        obj[2].GetComponent<Animator>().SetBool("water", true);
+        obj[6].GetComponent<Animator>().SetBool("water", true);
+        obj[7].GetComponent<Animator>().SetBool("water", true);
+        obj[8].GetComponent<Animator>().SetBool("water", true);
+        obj[9].GetComponent<Animator>().SetBool("water", true);
+        obj[15].GetComponent<Animator>().SetBool("water", true);
+        obj[4].GetComponent<Animator>().SetBool("water", true);
+        obj[5].GetComponent<Animator>().SetBool("water", true);
+        obj[11].GetComponent<Animator>().SetBool("water", true);
+        finish.GetComponent<Animator>().SetBool("water", true);
+
+        foreach (GameObject p in obj)
+        {
+            p.GetComponent<PipeData>().lvlCompleted = true;
+        }
+
+        this.enabled = false;
+    }
+
     public void LoadData(GameData gameData)
     {
         if (gameData.pipesCompleted.ContainsKey("BigPipes1") && gameData.pipesCompleted["BigPipes1"])
         {
-            completed = true;
-            this.enabled = false;
+            ActivateWater();
         }
     }
 

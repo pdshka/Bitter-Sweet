@@ -340,16 +340,7 @@ public class BigPipe2 : MonoBehaviour, IDataPersistence
 
         if (k0 == 0 && k15 == 1 && k13 == 3 && k9 == 3 && k8 == 1 && k14 == 1 && k4 == 1)  // ѕроверка правильного положени€ труб дл€ прохождени€ уровн€
         {
-            completed = true;
-            obj[0].GetComponent<Animator>().SetBool("water", true);
-            obj[15].GetComponent<Animator>().SetBool("water", true);
-            obj[13].GetComponent<Animator>().SetBool("water", true);
-            obj[9].GetComponent<Animator>().SetBool("water", true);
-            obj[8].GetComponent<Animator>().SetBool("water", true);
-            obj[14].GetComponent<Animator>().SetBool("water", true);
-            obj[4].GetComponent<Animator>().SetBool("water", true);
-            finish.GetComponent<Animator>().SetBool("water", true);
-            this.enabled = false;
+            ActivateWater();
 
             Debug.Log("”ровень пройден");
         }
@@ -526,12 +517,31 @@ public class BigPipe2 : MonoBehaviour, IDataPersistence
         }
     }
 
+    public void ActivateWater()
+    {
+        completed = true;
+        obj[0].GetComponent<Animator>().SetBool("water", true);
+        obj[15].GetComponent<Animator>().SetBool("water", true);
+        obj[13].GetComponent<Animator>().SetBool("water", true);
+        obj[9].GetComponent<Animator>().SetBool("water", true);
+        obj[8].GetComponent<Animator>().SetBool("water", true);
+        obj[14].GetComponent<Animator>().SetBool("water", true);
+        obj[4].GetComponent<Animator>().SetBool("water", true);
+        finish.GetComponent<Animator>().SetBool("water", true);
+
+        foreach(GameObject p in obj)
+        {
+            p.GetComponent<PipeData>().lvlCompleted = true;
+        }
+
+        this.enabled = false;
+    }
+
     public void LoadData(GameData gameData)
     {
         if (gameData.pipesCompleted.ContainsKey("BigPipes2") && gameData.pipesCompleted["BigPipes2"])
         {
-            completed = true;
-            this.enabled = false;
+            ActivateWater();
         }
     }
 

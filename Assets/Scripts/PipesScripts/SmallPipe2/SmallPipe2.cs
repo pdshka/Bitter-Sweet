@@ -215,14 +215,7 @@ public class SmallPipe2 : MonoBehaviour, IDataPersistence
 
         if (k0 == 1 && k1 == 0 && k4 == 1 && k7 == 1 && k8 == 1)  // ѕроверка правильного положени€ труб дл€ прохождени€ уровн€
         {
-            obj[0].GetComponent<Animator>().SetBool("water", true);
-            obj[1].GetComponent<Animator>().SetBool("water", true);
-            obj[4].GetComponent<Animator>().SetBool("water", true);
-            obj[7].GetComponent<Animator>().SetBool("water", true);
-            obj[8].GetComponent<Animator>().SetBool("water", true);
-            finish.GetComponent<Animator>().SetBool("water", true);
-            completed = true;
-            this.enabled = false;
+            ActivateWater();
 
             Debug.Log("”ровень пройден");
         }
@@ -329,12 +322,29 @@ public class SmallPipe2 : MonoBehaviour, IDataPersistence
         }
     }
 
+    public void ActivateWater()
+    {
+        completed = true;
+        obj[0].GetComponent<Animator>().SetBool("water", true);
+        obj[1].GetComponent<Animator>().SetBool("water", true);
+        obj[4].GetComponent<Animator>().SetBool("water", true);
+        obj[7].GetComponent<Animator>().SetBool("water", true);
+        obj[8].GetComponent<Animator>().SetBool("water", true);
+        finish.GetComponent<Animator>().SetBool("water", true);
+
+        foreach (GameObject p in obj)
+        {
+            p.GetComponent<PipeData>().lvlCompleted = true;
+        }
+
+        this.enabled = false;
+    }
+
     public void LoadData(GameData gameData)
     {
         if (gameData.pipesCompleted.ContainsKey("SmallPipes2") && gameData.pipesCompleted["SmallPipes2"])
         {
-            completed = true;
-            this.enabled = false;
+            ActivateWater();
         }
     }
 

@@ -13,6 +13,7 @@ public class GameData
     public SerializableDictionary<string, bool> monkeysPassed;
     public SerializableDictionary<string, bool> fruitsCollected;
     public SerializableDictionary<string, bool> pipesCompleted;
+    public SerializableDictionary<string, Quaternion> pipesRotations;
 
     // initializing default values
     public GameData()
@@ -25,6 +26,7 @@ public class GameData
         this.monkeysPassed = new SerializableDictionary<string, bool>();
         this.fruitsCollected = new SerializableDictionary<string, bool>();
         this.pipesCompleted = new SerializableDictionary<string, bool>();
+        this.pipesRotations = new SerializableDictionary<string, Quaternion>();
     }
 
     private void SetTeleporters()

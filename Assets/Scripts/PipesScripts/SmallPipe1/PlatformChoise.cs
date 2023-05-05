@@ -193,16 +193,7 @@ public class PlatformChoise : MonoBehaviour, IDataPersistence
        
         if (k0 == 1 && k1 == 3 && k3 == 1 && k4 == 2 && k6 == 2 && k7 == 1 && k8 == 1)  // ѕроверка правильного положени€ труб дл€ прохождени€ уровн€
         {
-            completed = true;
-            obj[0].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[1].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[3].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[4].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[6].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[7].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[8].GetComponentInChildren<Animator>().SetBool("water", true);
-            finish.GetComponent<Animator>().SetBool("water", true);
-            this.enabled = false;
+            ActivateWater();
 
             Debug.Log("”ровень пройден");
         }
@@ -370,12 +361,31 @@ public class PlatformChoise : MonoBehaviour, IDataPersistence
         }
     }
 
+    public void ActivateWater()
+    {
+        completed = true;
+        obj[0].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[1].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[3].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[4].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[6].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[7].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[8].GetComponentInChildren<Animator>().SetBool("water", true);
+        finish.GetComponent<Animator>().SetBool("water", true);
+
+        foreach (GameObject p in obj)
+        {
+            p.GetComponent<PipeData>().lvlCompleted = true;
+        }
+
+        this.enabled = false;
+    }
+
     public void LoadData(GameData gameData)
     {
         if (gameData.pipesCompleted.ContainsKey("Pipes") && gameData.pipesCompleted["Pipes"])
         {
-            completed = true;
-            this.enabled = false;
+            ActivateWater();
         }
     }
 
