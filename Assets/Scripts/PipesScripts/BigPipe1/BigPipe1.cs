@@ -341,6 +341,7 @@ public class BigPipe1 : MonoBehaviour, IDataPersistence
        
         if (k0 == 3 && k1 == 0 && k2 == 3 && k6 == 0 && k7 == 0 && k8 == 3 && k9 == 0 && k15 == 2 && k4 == 0 && k5 == 1 && k11 == 1)  // ѕроверка правильного положени€ труб дл€ прохождени€ уровн€
             {
+            completed = true;
             obj[0].GetComponent<Animator>().SetBool("water", true);
             obj[1].GetComponent<Animator>().SetBool("water", true);
             obj[2].GetComponent<Animator>().SetBool("water", true);
@@ -353,7 +354,6 @@ public class BigPipe1 : MonoBehaviour, IDataPersistence
             obj[5].GetComponent<Animator>().SetBool("water", true);
             obj[11].GetComponent<Animator>().SetBool("water", true);
             finish.GetComponent<Animator>().SetBool("water", true);
-            completed = true;
             this.enabled = false;
 
             Debug.Log("”ровень пройден");
@@ -650,6 +650,7 @@ public class BigPipe1 : MonoBehaviour, IDataPersistence
     public void SaveData(ref GameData gameData)
     {
         gameData.pipesCompleted["BigPipes1"] = completed;
+        Debug.LogWarning("Saved bp1");
     }
 }
 

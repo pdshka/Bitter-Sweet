@@ -193,6 +193,7 @@ public class PlatformChoise : MonoBehaviour, IDataPersistence
        
         if (k0 == 1 && k1 == 3 && k3 == 1 && k4 == 2 && k6 == 2 && k7 == 1 && k8 == 1)  // ѕроверка правильного положени€ труб дл€ прохождени€ уровн€
         {
+            completed = true;
             obj[0].GetComponentInChildren<Animator>().SetBool("water", true);
             obj[1].GetComponentInChildren<Animator>().SetBool("water", true);
             obj[3].GetComponentInChildren<Animator>().SetBool("water", true);
@@ -201,7 +202,6 @@ public class PlatformChoise : MonoBehaviour, IDataPersistence
             obj[7].GetComponentInChildren<Animator>().SetBool("water", true);
             obj[8].GetComponentInChildren<Animator>().SetBool("water", true);
             finish.GetComponent<Animator>().SetBool("water", true);
-            this.completed = true;
             this.enabled = false;
 
             Debug.Log("”ровень пройден");
@@ -374,7 +374,7 @@ public class PlatformChoise : MonoBehaviour, IDataPersistence
     {
         if (gameData.pipesCompleted.ContainsKey("Pipes") && gameData.pipesCompleted["Pipes"])
         {
-            this.completed = true;
+            completed = true;
             this.enabled = false;
         }
     }

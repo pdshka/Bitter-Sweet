@@ -3310,7 +3310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 150005655286262608, guid: f38212c84399bc64cb692b29d909433b, type: 3}
       propertyPath: toID
-      value: a77582c5-c4c5-4a55-bf2e-a18a1a801b64
+      value: 37358e64-d1d2-44dc-a5c1-3ee2c9ad185e
       objectReference: {fileID: 0}
     - target: {fileID: 150005655286262608, guid: f38212c84399bc64cb692b29d909433b, type: 3}
       propertyPath: sceneName
@@ -3461,7 +3461,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1423221746}
-  - component: {fileID: 1423221745}
   m_Layer: 0
   m_Name: GamePlatforms
   m_TagString: Untagged
@@ -3469,37 +3468,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1423221745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423221744}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ef7f8a00d4d84140b3b61588b019935, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  k: 15
-  obj:
-  - {fileID: 1910293883}
-  - {fileID: 821888500}
-  - {fileID: 527731951}
-  - {fileID: 1781542804}
-  - {fileID: 1775568550}
-  - {fileID: 738227401}
-  - {fileID: 365698994}
-  - {fileID: 603198026}
-  - {fileID: 11052808}
-  - {fileID: 43478110}
-  - {fileID: 645009281}
-  - {fileID: 2053841565}
-  - {fileID: 1896773218}
-  - {fileID: 11832999}
-  - {fileID: 511203254}
-  - {fileID: 1615688826}
-  finish: {fileID: 2035916660}
 --- !u!4 &1423221746
 Transform:
   m_ObjectHideFlags: 0

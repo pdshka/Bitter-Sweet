@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // Выбор куба на WASD персонажем и его поворот на стрелочки, логика.
 
-public class BigPipe2 : MonoBehaviour
+public class BigPipe2 : MonoBehaviour, IDataPersistence
 {                                                 // Константы 
     private int k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15 = 0;
     private int Chain = 0;
@@ -340,6 +340,7 @@ public class BigPipe2 : MonoBehaviour
 
         if (k0 == 0 && k15 == 1 && k13 == 3 && k9 == 3 && k8 == 1 && k14 == 1 && k4 == 1)  // Проверка правильного положения труб для прохождения уровня
         {
+            completed = true;
             obj[0].GetComponent<Animator>().SetBool("water", true);
             obj[15].GetComponent<Animator>().SetBool("water", true);
             obj[13].GetComponent<Animator>().SetBool("water", true);
@@ -348,7 +349,6 @@ public class BigPipe2 : MonoBehaviour
             obj[14].GetComponent<Animator>().SetBool("water", true);
             obj[4].GetComponent<Animator>().SetBool("water", true);
             finish.GetComponent<Animator>().SetBool("water", true);
-            completed = true;
             this.enabled = false;
 
             Debug.Log("Уровень пройден");
@@ -538,6 +538,7 @@ public class BigPipe2 : MonoBehaviour
     public void SaveData(ref GameData gameData)
     {
         gameData.pipesCompleted["BigPipes2"] = completed;
+        Debug.LogWarning("Saved bp2");
     }
 }
 
