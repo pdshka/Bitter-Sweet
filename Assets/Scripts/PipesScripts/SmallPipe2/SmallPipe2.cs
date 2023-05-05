@@ -14,7 +14,7 @@ public class SmallPipe2 : MonoBehaviour, IDataPersistence
     public int k = 8;                             // Количество "труб" -1   для массива
     public GameObject[] obj = new GameObject[9];
     public GameObject finish;
-
+    private bool completed;
 
     private Animator anim;
 
@@ -221,7 +221,7 @@ public class SmallPipe2 : MonoBehaviour, IDataPersistence
             obj[7].GetComponent<Animator>().SetBool("water", true);
             obj[8].GetComponent<Animator>().SetBool("water", true);
             finish.GetComponent<Animator>().SetBool("water", true);
-
+            completed = true;
             this.enabled = false;
 
             Debug.Log("Уровень пройден");
@@ -333,13 +333,14 @@ public class SmallPipe2 : MonoBehaviour, IDataPersistence
     {
         if (gameData.pipesCompleted.ContainsKey("SmallPipes2") && gameData.pipesCompleted["SmallPipes2"])
         {
+            completed = true;
             this.enabled = false;
         }
     }
 
     public void SaveData(ref GameData gameData)
     {
-        gameData.pipesCompleted["SmallPipes2"] = this.enabled;
+        gameData.pipesCompleted["SmallPipes2"] = completed;
     }
 }
 

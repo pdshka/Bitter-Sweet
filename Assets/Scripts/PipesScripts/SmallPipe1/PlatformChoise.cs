@@ -11,6 +11,7 @@ public class PlatformChoise : MonoBehaviour, IDataPersistence
     public int k = 8;                             // Количество "труб" -1   для массива
     public GameObject[] obj = new GameObject[9];
     public GameObject finish;
+    private bool completed = false;
 
 
 
@@ -200,6 +201,7 @@ public class PlatformChoise : MonoBehaviour, IDataPersistence
             obj[7].GetComponentInChildren<Animator>().SetBool("water", true);
             obj[8].GetComponentInChildren<Animator>().SetBool("water", true);
             finish.GetComponent<Animator>().SetBool("water", true);
+            this.completed = true;
             this.enabled = false;
 
             Debug.Log("Уровень пройден");
@@ -372,12 +374,13 @@ public class PlatformChoise : MonoBehaviour, IDataPersistence
     {
         if (gameData.pipesCompleted.ContainsKey("Pipes") && gameData.pipesCompleted["Pipes"])
         {
+            this.completed = true;
             this.enabled = false;
         }
     }
 
     public void SaveData(ref GameData gameData)
     {
-        gameData.pipesCompleted["Pipes"] = this.enabled;
+        gameData.pipesCompleted["Pipes"] = completed;
     }
 }

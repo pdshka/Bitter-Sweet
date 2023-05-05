@@ -14,6 +14,7 @@ public class BigPipe1 : MonoBehaviour, IDataPersistence
     public GameObject[] obj = new GameObject[16];
     public GameObject finish;
 
+    private bool completed = false;
 
     private Animator anim;
 
@@ -352,7 +353,7 @@ public class BigPipe1 : MonoBehaviour, IDataPersistence
             obj[5].GetComponent<Animator>().SetBool("water", true);
             obj[11].GetComponent<Animator>().SetBool("water", true);
             finish.GetComponent<Animator>().SetBool("water", true);
-
+            completed = true;
             this.enabled = false;
 
             Debug.Log("Уровень пройден");
@@ -641,13 +642,14 @@ public class BigPipe1 : MonoBehaviour, IDataPersistence
     {
         if (gameData.pipesCompleted.ContainsKey("BigPipes1") && gameData.pipesCompleted["BigPipes1"])
         {
+            completed = true;
             this.enabled = false;
         }
     }
 
     public void SaveData(ref GameData gameData)
     {
-        gameData.pipesCompleted["BigPipes1"] = this.enabled;
+        gameData.pipesCompleted["BigPipes1"] = completed;
     }
 }
 

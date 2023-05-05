@@ -13,7 +13,7 @@ public class BigPipe2 : MonoBehaviour
     public int k = 15;                             // Количество "труб" +1   для массива
     public GameObject[] obj = new GameObject[16];
     public GameObject finish;
-
+    private bool completed;
 
     private Animator anim;
 
@@ -348,7 +348,7 @@ public class BigPipe2 : MonoBehaviour
             obj[14].GetComponent<Animator>().SetBool("water", true);
             obj[4].GetComponent<Animator>().SetBool("water", true);
             finish.GetComponent<Animator>().SetBool("water", true);
-
+            completed = true;
             this.enabled = false;
 
             Debug.Log("Уровень пройден");
@@ -530,13 +530,14 @@ public class BigPipe2 : MonoBehaviour
     {
         if (gameData.pipesCompleted.ContainsKey("BigPipes2") && gameData.pipesCompleted["BigPipes2"])
         {
+            completed = true;
             this.enabled = false;
         }
     }
 
     public void SaveData(ref GameData gameData)
     {
-        gameData.pipesCompleted["BigPipes2"] = this.enabled;
+        gameData.pipesCompleted["BigPipes2"] = completed;
     }
 }
 
