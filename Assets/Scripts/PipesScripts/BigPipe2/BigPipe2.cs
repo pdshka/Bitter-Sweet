@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // Выбор куба на WASD персонажем и его поворот на стрелочки, логика.
 
-public class BigPipe2 : MonoBehaviour
+public class BigPipe2 : MonoBehaviour, IDataPersistence
 {                                                 // Константы 
     private int k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15 = 0;
     private int Chain = 0;
@@ -12,7 +12,8 @@ public class BigPipe2 : MonoBehaviour
 
     public int k = 15;                             // Количество "труб" +1   для массива
     public GameObject[] obj = new GameObject[16];
-
+    public GameObject finish;
+    private bool completed;
 
     private Animator anim;
 
@@ -339,6 +340,8 @@ public class BigPipe2 : MonoBehaviour
 
         if (k0 == 0 && k15 == 1 && k13 == 3 && k9 == 3 && k8 == 1 && k14 == 1 && k4 == 1)  // Проверка правильного положения труб для прохождения уровня
         {
+            ActivateWater();
+
             Debug.Log("Уровень пройден");
         }
 
@@ -512,6 +515,40 @@ public class BigPipe2 : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ActivateWater()
+    {
+        completed = true;
+        obj[0].GetComponent<Animator>().SetBool("water", true);
+        obj[15].GetComponent<Animator>().SetBool("water", true);
+        obj[13].GetComponent<Animator>().SetBool("water", true);
+        obj[9].GetComponent<Animator>().SetBool("water", true);
+        obj[8].GetComponent<Animator>().SetBool("water", true);
+        obj[14].GetComponent<Animator>().SetBool("water", true);
+        obj[4].GetComponent<Animator>().SetBool("water", true);
+        finish.GetComponent<Animator>().SetBool("water", true);
+
+        foreach(GameObject p in obj)
+        {
+            p.GetComponent<PipeData>().lvlCompleted = true;
+        }
+
+        this.enabled = false;
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        if (gameData.pipesCompleted.ContainsKey("BigPipes2") && gameData.pipesCompleted["BigPipes2"])
+        {
+            ActivateWater();
+        }
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.pipesCompleted["BigPipes2"] = completed;
+        Debug.LogWarning("Saved bp2");
     }
 }
 

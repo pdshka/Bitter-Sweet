@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // Выбор куба на WASD и его поворот на стрелочки, логика.
 
-public class PlatformChoise : MonoBehaviour
+public class PlatformChoise : MonoBehaviour, IDataPersistence
 {                                                  // Константы 
     private int k0, k1, k3, k4, k6, k7, k8 = 0;
     private int Chain = 0;
@@ -11,6 +11,7 @@ public class PlatformChoise : MonoBehaviour
     public int k = 8;                             // Количество "труб" -1   для массива
     public GameObject[] obj = new GameObject[9];
     public GameObject finish;
+    private bool completed = false;
 
 
 
@@ -192,15 +193,7 @@ public class PlatformChoise : MonoBehaviour
        
         if (k0 == 1 && k1 == 3 && k3 == 1 && k4 == 2 && k6 == 2 && k7 == 1 && k8 == 1)  // Проверка правильного положения труб для прохождения уровня
         {
-            obj[0].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[1].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[3].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[4].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[6].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[7].GetComponentInChildren<Animator>().SetBool("water", true);
-            obj[8].GetComponentInChildren<Animator>().SetBool("water", true);
-            finish.GetComponent<Animator>().SetBool("water", true);
-            this.enabled = false;
+            ActivateWater();
 
             Debug.Log("Уровень пройден");
         }
@@ -366,5 +359,38 @@ public class PlatformChoise : MonoBehaviour
                 k1 = 3;
             }
         }
+    }
+
+    public void ActivateWater()
+    {
+        completed = true;
+        obj[0].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[1].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[3].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[4].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[6].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[7].GetComponentInChildren<Animator>().SetBool("water", true);
+        obj[8].GetComponentInChildren<Animator>().SetBool("water", true);
+        finish.GetComponent<Animator>().SetBool("water", true);
+
+        foreach (GameObject p in obj)
+        {
+            p.GetComponent<PipeData>().lvlCompleted = true;
+        }
+
+        this.enabled = false;
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        if (gameData.pipesCompleted.ContainsKey("Pipes") && gameData.pipesCompleted["Pipes"])
+        {
+            ActivateWater();
+        }
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.pipesCompleted["Pipes"] = completed;
     }
 }

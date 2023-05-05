@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // Выбор куба на WASD и его поворот на стрелочки, логика.
 
-public class SmallPipe2 : MonoBehaviour
+public class SmallPipe2 : MonoBehaviour, IDataPersistence
 {                                                 // Константы 
     private int k0, k1, k2, k3, k4, k5, k6, k7, k8 = 0;
     //private int k0w, k1w, k2w, k3w, k4w, k5w, k6w, k7w, k8w = 0;
@@ -13,28 +13,29 @@ public class SmallPipe2 : MonoBehaviour
 
     public int k = 8;                             // Количество "труб" -1   для массива
     public GameObject[] obj = new GameObject[9];
-
+    public GameObject finish;
+    private bool completed;
 
     private Animator anim;
 
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        sprite = GetComponentInChildren<SpriteRenderer>();
-    }
+    //private void Awake()
+    //{
+    //    rb = GetComponent<Rigidbody2D>();
+    //    anim = GetComponent<Animator>();
+    //    sprite = GetComponentInChildren<SpriteRenderer>();
+    //}
 
-    public enum States
-    {
-        True,
-        False
-    }
+    //public enum States
+    //{
+    //    True,
+    //    False
+    //}
 
-    private States State
-    {
-        get { return (States)anim.GetInteger("state"); }
-        set { anim.SetInteger("state", (int)value); }
-    }
+    //private States State
+    //{
+    //    get { return (States)anim.GetInteger("state"); }
+    //    set { anim.SetInteger("state", (int)value); }
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)     // Проверка срабатывания тригера для выбора трубы 
     {
@@ -214,6 +215,8 @@ public class SmallPipe2 : MonoBehaviour
 
         if (k0 == 1 && k1 == 0 && k4 == 1 && k7 == 1 && k8 == 1)  // Проверка правильного положения труб для прохождения уровня
         {
+            ActivateWater();
+
             Debug.Log("Уровень пройден");
         }
 
@@ -317,6 +320,37 @@ public class SmallPipe2 : MonoBehaviour
                 k1 = 3;
             }
         }
+    }
+
+    public void ActivateWater()
+    {
+        completed = true;
+        obj[0].GetComponent<Animator>().SetBool("water", true);
+        obj[1].GetComponent<Animator>().SetBool("water", true);
+        obj[4].GetComponent<Animator>().SetBool("water", true);
+        obj[7].GetComponent<Animator>().SetBool("water", true);
+        obj[8].GetComponent<Animator>().SetBool("water", true);
+        finish.GetComponent<Animator>().SetBool("water", true);
+
+        foreach (GameObject p in obj)
+        {
+            p.GetComponent<PipeData>().lvlCompleted = true;
+        }
+
+        this.enabled = false;
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        if (gameData.pipesCompleted.ContainsKey("SmallPipes2") && gameData.pipesCompleted["SmallPipes2"])
+        {
+            ActivateWater();
+        }
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.pipesCompleted["SmallPipes2"] = completed;
     }
 }
 

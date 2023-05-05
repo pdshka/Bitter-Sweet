@@ -12,6 +12,8 @@ public class GameData
     public SerializableDictionary<string, bool> teleportersActivated;
     public SerializableDictionary<string, bool> monkeysPassed;
     public SerializableDictionary<string, bool> fruitsCollected;
+    public SerializableDictionary<string, bool> pipesCompleted;
+    public SerializableDictionary<string, Quaternion> pipesRotations;
 
     // initializing default values
     public GameData()
@@ -23,6 +25,8 @@ public class GameData
         this.teleportersActivated = new SerializableDictionary<string, bool>();
         this.monkeysPassed = new SerializableDictionary<string, bool>();
         this.fruitsCollected = new SerializableDictionary<string, bool>();
+        this.pipesCompleted = new SerializableDictionary<string, bool>();
+        this.pipesRotations = new SerializableDictionary<string, Quaternion>();
     }
 
     private void SetTeleporters()
@@ -62,5 +66,9 @@ public class GameData
         teleporters.Add("86dcb7be-5035-4f6f-a620-6854b767d6b7", new Vector3(-2.5f, 2.5f, 0)); // SmallPipes2-WaterTemple
         teleporters.Add("555cdd08-dd8b-4f2e-866b-093318e82527", new Vector3(-3.5f, 5.5f, 0)); // BigPipes1-WaterTemple
         teleporters.Add("e25f85ca-50d5-4f11-ab59-e5f1a2503d59", new Vector3(-3.5f, 3.5f, 0)); // BigPipes2-WaterTemple
+        teleporters.Add("65d95b51-7c6f-44eb-a571-9140d73aefbd", new Vector3(-0.5f, 30.5f, 0)); // WaterTemple-WaterTempleBigPipes
+        teleporters.Add("d9eaef3c-bb6e-40b0-a33b-03c1e72372e8", new Vector3(-0.5f, 28.5f, 0)); // WaterTempleBigPipes-WaterTemple
+        teleporters.Add("f7b3f114-9b7a-4c6e-bcf3-42e968e40db6", new Vector3(-0.5f, 16.5f, 0)); // WaterTempleToCenter-WaterTempleFromCenter
+        teleporters.Add("db4bb778-1043-489b-9849-02a366dc4aa5", new Vector3(-0.5f, 14.5f, 0)); // WaterTempleFromCenter-WaterTempleToCenter
     }
 }
