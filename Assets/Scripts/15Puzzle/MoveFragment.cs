@@ -10,6 +10,8 @@ public class MoveFragment : MonoBehaviour
     private int col_position;
     private int speed;
     private Vector3 empty_position = new Vector3(0, 0, 0);
+    //private GameObject ui_motion;
+    //private GameObject ui_completed;
     private bool can_move;
     public bool GameWin;
     private bool On = false;
@@ -22,7 +24,7 @@ public class MoveFragment : MonoBehaviour
     }
     void Update()
     {
-        if (Global.GameOn && On && Input.GetKeyDown(KeyCode.E) && !can_move)
+        if (On && Input.GetKeyDown(KeyCode.E) && !can_move)
         {
             FindOnBoard();
             CalculateDirection();
@@ -65,7 +67,7 @@ public class MoveFragment : MonoBehaviour
                 if (count == 16)
                 {
                     Debug.Log("Победа");
-                    Global.GameOn = false;
+                    GameWin = true;
                 }
             }
         }

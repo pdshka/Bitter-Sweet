@@ -33,7 +33,6 @@ public class Scenes : MonoBehaviour
     public void Menu()
     {
         Time.timeScale = 1f;
-        DataPersistenceManager.instance.SaveGame();
         SceneManager.LoadScene("Menu");
     }
 

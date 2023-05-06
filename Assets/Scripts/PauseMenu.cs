@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    public bool GameIsPaused;
-
-    private void Start()
-    {
-        GameIsPaused = false;
-    }
+    public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI; 
     // Update is called once per frame

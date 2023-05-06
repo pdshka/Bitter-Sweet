@@ -36,13 +36,13 @@ public class DataPersistenceManager : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
+        SceneManager.sceneUnloaded += OnSceneUnoaded;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+        SceneManager.sceneUnloaded -= OnSceneUnoaded;
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -51,15 +51,14 @@ public class DataPersistenceManager : MonoBehaviour
         LoadGame();
     }
 
-    public void OnSceneUnloaded(Scene scene)
+    public void OnSceneUnoaded(Scene scene)
     {
         SaveGame();
     }
 
     private void OnApplicationQuit()
     {
-        if (SceneManager.GetActiveScene().name != "Menu")
-            SaveGame();
+        SaveGame();
     }
 
     public void NewGame()

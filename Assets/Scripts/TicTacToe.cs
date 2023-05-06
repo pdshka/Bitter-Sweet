@@ -65,7 +65,6 @@ public class TicTacToe : MonoBehaviour
 
     private void ResetGame()
     {
-        StopCoroutine(MonkeyTurn());
         // reset buttons
         foreach(Button b in buttons)
         {
@@ -121,7 +120,7 @@ public class TicTacToe : MonoBehaviour
             turnInfo.text = "";
             retryButton.gameObject.SetActive(true);
         }
-        else if (turn == 9)
+        else if (turn == 8)
         {
             DisableButtons();
             winnerInfo.text = "Ничья!";
@@ -146,11 +145,8 @@ public class TicTacToe : MonoBehaviour
         int[] move = PC();
 
         MakeMove(move[0]*3 + move[1]);
-        if (winnerInfo.text == "")
-        {
-            turnInfo.text = "Ваш ход";
-            EnableButtons();
-        }
+        turnInfo.text = "Ваш ход";
+        EnableButtons();
     }
 
     private int[] PC()
@@ -180,11 +176,9 @@ public class TicTacToe : MonoBehaviour
             boardCopy[m[0], m[1]] = 1;
             if (Winner(boardCopy, 1))
             {
-                move = m;
+                return m;
             }
         }
-        if (move[1] != -1)
-            return move;
 
         List<int[]> corners = new List<int[]>();
         foreach (int[] m in possibleMoves)
