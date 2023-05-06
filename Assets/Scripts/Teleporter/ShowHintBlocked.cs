@@ -16,7 +16,13 @@ public class ShowHintBlocked : MonoBehaviour, IDataPersistence
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player" && blocked)
+        {
             hint.SetActive(true);
+        }
+        if (!blocked && !teleporter.GetComponent<SceneTeleporter>().isActivated)
+        {
+            teleporter.GetComponent<SceneTeleporter>().Activate();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
