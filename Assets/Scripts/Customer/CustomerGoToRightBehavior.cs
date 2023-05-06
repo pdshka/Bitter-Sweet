@@ -17,11 +17,11 @@ public class CustomerGoToRightBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (animator.transform.position.x + speed * Time.fixedDeltaTime > rightWayPoint.position.x)
+        if (animator.transform.position.x + speed * Time.deltaTime > rightWayPoint.position.x)
         {
             animator.SetBool("GoingAway", true);
         }
-        animator.transform.position = animator.transform.position + new Vector3(1, 0, 0) * speed * Time.fixedDeltaTime;
+        animator.transform.position = animator.transform.position + new Vector3(1, 0, 0) * speed * Time.deltaTime;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

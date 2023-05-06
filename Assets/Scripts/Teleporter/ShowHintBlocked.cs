@@ -33,7 +33,6 @@ public class ShowHintBlocked : MonoBehaviour, IDataPersistence
             if (!gameData.pipesCompleted.ContainsKey(lvl) || !gameData.pipesCompleted[lvl])
             {
                 blocked = true;
-                break;
             }
         }
         if (!blocked)

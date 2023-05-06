@@ -21,14 +21,14 @@ public class CustomerGoUpToDeskBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (animator.transform.position.y + speed * Time.fixedDeltaTime > orderPoint.position.y)
+        if (animator.transform.position.y + speed * Time.deltaTime > orderPoint.position.y)
         {
             animator.SetBool("Waiting", true);
         }
 
         if (!Physics2D.OverlapPoint(otherCustomerCheck.position, customerMask))
         {
-            animator.transform.position = animator.transform.position + new Vector3(0, 1, 0) * speed * Time.fixedDeltaTime;
+            animator.transform.position = animator.transform.position + new Vector3(0, 1, 0) * speed * Time.deltaTime;
         }
         else
         {

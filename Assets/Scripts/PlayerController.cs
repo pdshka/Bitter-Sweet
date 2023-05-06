@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     private int platformsCount = 0;
     private bool usedTeleporter = false;
     private string teleportToId = "";
+    private Vector3 pos;
 
     void Start()
     {
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         }
         else
         {
-            gameData.playerPosition = this.transform.position;
+            gameData.playerPosition = pos;
         }
     }
 
@@ -55,6 +56,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     {
         transform.position = transform.position + new Vector3(direction.x, direction.y) * stats.speed * Time.fixedDeltaTime;
         //rb.MovePosition(rb.position + direction * stats.speed * Time.fixedDeltaTime);
+        pos = transform.position;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -101,6 +101,7 @@ public class RiverObstacleGeneration : MonoBehaviour
         finished = true;
         cutscene.GetComponent<PlayableDirector>().Play();
         yield return new WaitForSeconds(3f);
+        player.GetComponent<PlayerController>().UseTeleport("5da5dfb1-abb4-45e6-9b73-7035e50bc49d");
         SceneManager.LoadScene("WaterTemple");
     }
 }
