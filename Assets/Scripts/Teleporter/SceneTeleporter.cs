@@ -79,6 +79,15 @@ public class SceneTeleporter : MonoBehaviour, IDataPersistence
     {
         isActivated = true;
         hint.SetActive(true);
-        GetComponent<Animator>().SetBool("isActivated", true);
+        Animator anim = GetComponent<Animator>();
+        if (anim != null)
+        {
+            if (anim.enabled)
+                anim.SetBool("isActivated", true);
+        }
+        else
+        {
+            Debug.LogError("animator " + id);
+        }
     }
 }

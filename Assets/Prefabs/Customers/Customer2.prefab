@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24b87091a8fa194e9508c77d72c6a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1
   otherCustomerCheck: {fileID: 3360718024377707533}
   customerMask:
     serializedVersion: 2

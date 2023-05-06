@@ -17,12 +17,12 @@ public class CustomerGoAwayBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (animator.transform.position.y - speed * Time.fixedDeltaTime < exitPoint.position.y)
+        if (animator.transform.position.y - speed * Time.deltaTime < exitPoint.position.y)
         {
             GameObject.Find("CustomerManager").GetComponent<CustomerSpawner>().currentCustomersOnScreen--;
             Destroy(animator.gameObject);
         }
-        animator.transform.position = animator.transform.position - new Vector3(0, 1, 0) * speed * Time.fixedDeltaTime;
+        animator.transform.position = animator.transform.position - new Vector3(0, 1, 0) * speed * Time.deltaTime;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
