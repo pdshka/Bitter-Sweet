@@ -512,9 +512,65 @@ PrefabInstance:
     m_TransformParent: {fileID: 20579334}
     m_Modifications:
     - target: {fileID: 6425812848176093154, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: dialogue.name
+      value: "\u0414\u0435\u0434"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425812848176093154, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
       propertyPath: dialogue.node
       value: 
       objectReference: {fileID: 11400000, guid: 1d32b948bd61c1548a6a60727e9d2988, type: 2}
+    - target: {fileID: 6581785696216201231, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696216201328, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696216201328, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -408.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696216201328, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696529293181, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696529293181, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696529293181, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696529293181, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696898451550, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 119.2851
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696898451550, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 130.8212
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696898451550, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 29.3362
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696898451550, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 33.8624
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696898451551, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 91795ecfae0145749b2289c1a49bda18, type: 3}
     - target: {fileID: 7577799461383623743, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
       propertyPath: m_Name
       value: Dialogue
