@@ -915,8 +915,8 @@ MonoBehaviour:
   - {fileID: 451473242159866855}
   - {fileID: 451473242609763140}
   - {fileID: 451473243544060646}
-  cross: {fileID: 21300000, guid: 3b0ff17c44d42624e9dc6c227361bb52, type: 3}
-  zero: {fileID: 21300000, guid: e1395e4e64f1b78469ae8b3abd8729c0, type: 3}
+  cross: {fileID: 21300000, guid: 922851c8d057a7d4faa2c8b9733fcc8e, type: 3}
+  zero: {fileID: 21300000, guid: f0076545a28b9a042a1232d8aaaa7557, type: 3}
   winnerInfo: {fileID: 451473242296895423}
   retryButton: {fileID: 451473241915502065}
   hint: {fileID: 451473242086516975}
@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 505e7b923687d734ea82207ce5984e5a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bebc51bc370c6c6428b6a740fb45577b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2227,12 +2227,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

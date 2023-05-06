@@ -16,7 +16,7 @@ public class CreatePuzzle : MonoBehaviour
     void Start()
     {
         board_position = transform.position;
-        transform.localScale = new Vector3(SizeOfBoard, SizeOfBoard);
+        transform.localScale = new Vector3(SizeOfBoard, SizeOfBoard,1);
         split_x = SizeOfBoard / 4;
         split_y = SizeOfBoard / 4;
         GenerateBoard();
@@ -95,7 +95,6 @@ public class CreatePuzzle : MonoBehaviour
             } while (!cancel);
         }
         CheckShuffle();
-        //PrintArr();
     }
     private void CheckShuffle()
     {
@@ -114,16 +113,6 @@ public class CreatePuzzle : MonoBehaviour
         }
 
     }
-    private void PrintArr()
-    {
-        for (int i = 0; i < 4; i++)
-        {
-            for (int j = 0; j < 4; j++)
-            {
-                //Debug.Log($"{Global.board[i, j]} ");
-            }
-        }
-    }
     void ShowBoard()
     {
         for (int row = 0; row < 4; row++)
@@ -132,10 +121,10 @@ public class CreatePuzzle : MonoBehaviour
             {
                 if (Global.board[row, col] != 0)
                 {
-                    Vector3 coordinate = new Vector3(board_position.x + (row - 1.5f) * split_x, board_position.y + (col - 1.5f) * split_y, -0.0000001f);
+                    Vector3 coordinate = new Vector3(board_position.x + (row - 1.5f) * split_x, board_position.y + (col - 1.5f) * split_y, 0.00001f);
                     int chip = Global.board[row, col] - 1;
                     chips[chip].transform.position = coordinate;
-                    chips[chip].transform.localScale = new Vector3(0.25f, 0.25f);
+                    chips[chip].transform.localScale = new Vector3(0.25f, 0.25f,1f);
                 }
             }
         }
