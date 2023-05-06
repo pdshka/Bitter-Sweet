@@ -8,6 +8,7 @@ public class Stats : MonoBehaviour, IDataPersistence
     public int health;
     public float speed;
     public int money;
+    public IceCream iceCream;
 
     private void Start()
     {

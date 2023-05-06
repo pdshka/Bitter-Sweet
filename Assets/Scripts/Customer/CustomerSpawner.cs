@@ -17,6 +17,9 @@ public class CustomerSpawner : MonoBehaviour
     private bool isReloading;
     public bool cafeClosed;
 
+    [SerializeField]
+    private IceCream[] iceCreams;
+
     void FixedUpdate()
     {
         if (!cafeClosed)
@@ -28,6 +31,9 @@ public class CustomerSpawner : MonoBehaviour
                     currentCustomersOnScreen++;
                     GameObject c = Instantiate(customers[Random.RandomRange(0, customers.Length)], spawnPoint.position, Quaternion.identity) as GameObject;
                     c.GetComponent<SpriteRenderer>().sortingOrder = firstSortingOrder++;
+                    IceCream iceCream = ChooseIceCream();
+                    c.GetComponentInChildren<Customer>().order.iceCream = iceCream;
+                    c.GetComponentInChildren<Customer>().order.flavorSprite.sprite = iceCream.sprite;
                     StartCoroutine(Reload(realodTime));
                 }
             }
@@ -39,5 +45,11 @@ public class CustomerSpawner : MonoBehaviour
         isReloading = true;
         yield return new WaitForSeconds(reloadTime);
         isReloading = false;
+    }
+
+    IceCream ChooseIceCream()
+    {
+        IceCream iceCream = iceCreams[Random.RandomRange(0, iceCreams.Length)];
+        return iceCream;
     }
 }
