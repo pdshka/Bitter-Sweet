@@ -15,6 +15,25 @@ public class IceCreamBox : MonoBehaviour, IDataPersistence
 
     public IceCream iceCream;
 
+    private bool playerIsNear;
+    private Stats playerStats;
+
+    private void Start()
+    {
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>();
+    }
+
+    private void Update()
+    {
+        if (playerIsNear)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                playerStats.iceCream = iceCream;
+            }
+        }
+    }
+
     public void LoadData(GameData gameData)
     {
         if (gameData.iceCreamBoxes.ContainsKey(id) && gameData.iceCreamBoxes[id])
@@ -27,5 +46,17 @@ public class IceCreamBox : MonoBehaviour, IDataPersistence
     public void SaveData(ref GameData gameData)
     {
         gameData.iceCreamBoxes[id] = unlocked;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+            playerIsNear = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+            playerIsNear = false;
     }
 }

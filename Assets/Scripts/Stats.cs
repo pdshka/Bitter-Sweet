@@ -10,11 +10,6 @@ public class Stats : MonoBehaviour, IDataPersistence
     public int money;
     public IceCream iceCream;
 
-    private void Start()
-    {
-        //health = maxHealth;
-    }
-
     public void TakeDamage(int damage)
     {
         health -= damage;

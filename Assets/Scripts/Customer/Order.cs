@@ -22,6 +22,7 @@ public class Order : MonoBehaviour
             {
                 GetComponentInParent<Animator>().SetBool("Waiting", false);
                 playerStats.money += iceCream.cost;
+                playerStats.iceCream = null;
             }
         }
     }
