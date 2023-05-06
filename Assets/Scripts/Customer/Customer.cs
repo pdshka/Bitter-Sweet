@@ -8,4 +8,5 @@ public class Customer : MonoBehaviour
     public Transform otherCustomerCheck;
     public LayerMask customerMask;
     public GameObject interactionArea;
+    public Order order;
 }
