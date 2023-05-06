@@ -20,6 +20,17 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField]
     private IceCream[] iceCreams;
 
+    [SerializeField]
+    private GameObject[] iceCreamBoxes;
+
+    private void Start()
+    {
+        if (iceCreams.Length != iceCreamBoxes.Length)
+        {
+            Debug.LogError("Размеры массивов мороженых и автоматов не совпадают!");
+        }
+    }
+
     void FixedUpdate()
     {
         if (!cafeClosed)
@@ -49,7 +60,13 @@ public class CustomerSpawner : MonoBehaviour
 
     IceCream ChooseIceCream()
     {
-        IceCream iceCream = iceCreams[Random.RandomRange(0, iceCreams.Length)];
+        int i = 0;
+        do
+        {
+            i = Random.RandomRange(0, iceCreams.Length);
+        }
+        while (!iceCreamBoxes[i].GetComponent<IceCreamBox>().unlocked);
+        IceCream iceCream = iceCreams[i];
         return iceCream;
     }
 }
