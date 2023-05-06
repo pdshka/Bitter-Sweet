@@ -36,7 +36,7 @@ public class IceCreamBox : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData gameData)
     {
-        if (gameData.iceCreamBoxes.ContainsKey(id) && gameData.iceCreamBoxes[id])
+        if (gameData.iceCreamBoxes.ContainsKey(id))
         {
             unlocked = gameData.iceCreamBoxes[id];
         }
