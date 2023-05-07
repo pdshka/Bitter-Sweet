@@ -21,3 +21,6 @@
 Меню паузы - esc
 # Помощь  
 ![image](https://user-images.githubusercontent.com/92753486/205504995-ad1ddb71-e63b-4387-bd6d-0f80d566ac25.png)
+
+# Используемые материалы
+Музыка Steven Mudd - Autumn
