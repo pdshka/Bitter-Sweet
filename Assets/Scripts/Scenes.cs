@@ -28,7 +28,7 @@ public class Scenes : MonoBehaviour
     }
     public void MainScene()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("CafeHints");
     }
     public void Menu()
     {
