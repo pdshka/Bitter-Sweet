@@ -1886,6 +1886,7 @@ GameObject:
   - component: {fileID: 8834374123887379691}
   - component: {fileID: 2067723396284311578}
   - component: {fileID: 8834374123887379688}
+  - component: {fileID: 6900056900807954380}
   m_Layer: 0
   m_Name: 15Puzzle
   m_TagString: Untagged
@@ -1935,6 +1936,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee0583e370d9134b92ba04227ee6e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FragmentsSprites: []
+  BoardSprite: {fileID: 0}
   chips:
   - {fileID: 1378259838262154747}
   - {fileID: 2800496988608150660}
@@ -1951,8 +1954,10 @@ MonoBehaviour:
   - {fileID: 3815040355059112124}
   - {fileID: 4140865824305939617}
   - {fileID: 5152138338825186055}
-  board_position: {x: 0, y: 0, z: 0}
   SizeOfBoard: 4
+  split_x: 0
+  split_y: 0
+  global: {fileID: 6900056900807954380}
 --- !u!212 &8834374123887379688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2005,3 +2010,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6900056900807954380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834374123887379689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f68049305f82b4b9fd9238c2a99cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

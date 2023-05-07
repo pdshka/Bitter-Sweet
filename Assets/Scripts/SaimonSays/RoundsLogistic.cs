@@ -13,6 +13,7 @@ public class RoundsLogistic : MonoBehaviour
     int roundpased = 0;
     private int roundnumber = 1;
     float delay = 0.5f;
+    public Triggers triggers;
 
     [SerializeField] private SpriteRenderer SpriteObj1;
     [SerializeField] private SpriteRenderer SpriteObj2;
@@ -28,7 +29,7 @@ public class RoundsLogistic : MonoBehaviour
 
     // Функции
 
-    public static int randomnumber()
+    public int randomnumber()
     {
         int randomNumber = Random.Range(1, 10);
         return randomNumber;
@@ -135,7 +136,7 @@ public class RoundsLogistic : MonoBehaviour
     }
 
 
-    private static void Rounds(int roundnumber, out int[] ActiveElements)
+    private void Rounds(int roundnumber, out int[] ActiveElements)
     {
         int Countofelements = 1;
         ActiveElements = new int[6];
@@ -518,7 +519,7 @@ public class RoundsLogistic : MonoBehaviour
 
     private IEnumerator Round1()
     {
-        Round1(ref Triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2, ref falselock1, ref falselock2, ref false1, ref false2, ref roundpased);
+        Round1(ref triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2, ref falselock1, ref falselock2, ref false1, ref false2, ref roundpased);
         yield return new WaitForSeconds(1f);
     }
 
@@ -531,16 +532,16 @@ public class RoundsLogistic : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             ConstUpdater(ref lock1, ref lock2, ref lock3, ref lock4, ref lock5, ref falselock1, ref falselock2, ref falselock3, ref falselock4, ref falselock5, ref false1, ref false2, ref false3, ref false4, ref false5);
-            Triggers.PlayerChoise = 100;
+            triggers.PlayerChoise = 100;
 
-            Round1(ref Triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2, ref falselock1, ref falselock2, ref false1, ref false2, ref roundpased);
+            Round1(ref triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2, ref falselock1, ref falselock2, ref false1, ref false2, ref roundpased);
         }
         yield return new WaitForSeconds(1f);
     }
 
     private IEnumerator Round2()
     {
-        Round2(ref Triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2, ref lock3, ref falselock1, ref falselock2, ref falselock3, ref false1, ref false2, ref false3, ref roundpased);
+        Round2(ref triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2, ref lock3, ref falselock1, ref falselock2, ref falselock3, ref false1, ref false2, ref false3, ref roundpased);
         yield return new WaitForSeconds(1f);
     }
 
@@ -553,16 +554,16 @@ public class RoundsLogistic : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             ConstUpdater(ref lock1, ref lock2, ref lock3, ref lock4, ref lock5, ref falselock1, ref falselock2, ref falselock3, ref falselock4, ref falselock5, ref false1, ref false2, ref false3, ref false4, ref false5);
-            Triggers.PlayerChoise = 100;
+            triggers.PlayerChoise = 100;
 
-            Round2(ref Triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2, ref lock3, ref falselock1, ref falselock2, ref falselock3, ref false1, ref false2, ref false3, ref roundpased);
+            Round2(ref triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2, ref lock3, ref falselock1, ref falselock2, ref falselock3, ref false1, ref false2, ref false3, ref roundpased);
         }
         yield return new WaitForSeconds(1f);
     }
 
     private IEnumerator Round3()
     {
-        Round3(ref Triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2,
+        Round3(ref triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2,
         ref lock3, ref lock4, ref falselock1, ref falselock2, ref falselock3, ref falselock4, ref false1, ref false2, ref false3, ref false4, ref roundpased);
         yield return new WaitForSeconds(1f);
     }
@@ -576,16 +577,16 @@ public class RoundsLogistic : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             ConstUpdater(ref lock1, ref lock2, ref lock3, ref lock4, ref lock5, ref falselock1, ref falselock2, ref falselock3, ref falselock4, ref falselock5, ref false1, ref false2, ref false3, ref false4, ref false5);
-            Triggers.PlayerChoise = 100;
+            triggers.PlayerChoise = 100;
 
-            Round3(ref Triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2,
+            Round3(ref triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2,
             ref lock3, ref lock4, ref falselock1, ref falselock2, ref falselock3, ref falselock4, ref false1, ref false2, ref false3, ref false4, ref roundpased);
         }
         yield return new WaitForSeconds(1f);
     }
     private IEnumerator Round4()
     {
-        Round4(ref Triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2,
+        Round4(ref triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2,
         ref lock3, ref lock4, ref lock5, ref falselock1, ref falselock2, ref falselock3, ref falselock4, ref falselock5, ref false1, ref false2, ref false3, ref false4, ref false5, ref roundpased);
         yield return new WaitForSeconds(1f);
     }
@@ -599,9 +600,9 @@ public class RoundsLogistic : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             ConstUpdater(ref lock1, ref lock2, ref lock3, ref lock4, ref lock5, ref falselock1, ref falselock2, ref falselock3, ref falselock4, ref falselock5, ref false1, ref false2, ref false3, ref false4, ref false5);
-            Triggers.PlayerChoise = 100;
+            triggers.PlayerChoise = 100;
 
-            Round4(ref Triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2,
+            Round4(ref triggers.PlayerChoise, RightElements, ref roundnumber, ref lock1, ref lock2,
             ref lock3, ref lock4, ref lock5, ref falselock1, ref falselock2, ref falselock3, ref falselock4, ref falselock5, ref false1, ref false2, ref false3, ref false4, ref false5, ref roundpased);
         }
         yield return new WaitForSeconds(1f);

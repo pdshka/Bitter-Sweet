@@ -16,11 +16,15 @@ public class MoveFragment : MonoBehaviour
     public bool GameWin;
     private bool On = false;
     private Vector3 coordinate;
+    private CreatePuzzle createPuzzle;
+    private Global global;
     void Start()
     {
         speed = 2;
         number_chip = int.Parse(gameObject.name);
         coordinate = transform.position;
+        createPuzzle = GetComponentInParent<CreatePuzzle>();
+        global = GetComponentInParent<Global>();
     }
     void Update()
     {
@@ -55,7 +59,7 @@ public class MoveFragment : MonoBehaviour
         {
             for (int col = 0; col < 4; col++)
             {
-                if (Global.board[row, col] == Global.board2[row,col])
+                if (global.board[row, col] == global.board2[row,col])
                 {
                     Debug.Log(count);
                 }
@@ -76,11 +80,11 @@ public class MoveFragment : MonoBehaviour
     {
         try
         {
-            if (Global.board[row_position + 1, col_position] == 0)
+            if (global.board[row_position + 1, col_position] == 0)
             {
-                empty_position = new Vector3(transform.position.x + CreatePuzzle.split_x, transform.position.y, transform.position.z);
-                Global.board[row_position, col_position] = 0;
-                Global.board[row_position + 1, col_position] = number_chip;
+                empty_position = new Vector3(transform.position.x + createPuzzle.split_x, transform.position.y, transform.position.z);
+                global.board[row_position, col_position] = 0;
+                global.board[row_position + 1, col_position] = number_chip;
                 can_move = true;
             }
         }
@@ -88,11 +92,11 @@ public class MoveFragment : MonoBehaviour
 
         try
         {
-            if (Global.board[row_position - 1, col_position] == 0)
+            if (global.board[row_position - 1, col_position] == 0)
             {
-                empty_position = new Vector3(transform.position.x - CreatePuzzle.split_x, transform.position.y, transform.position.z);
-                Global.board[row_position, col_position] = 0;
-                Global.board[row_position - 1, col_position] = number_chip;
+                empty_position = new Vector3(transform.position.x - createPuzzle.split_x, transform.position.y, transform.position.z);
+                global.board[row_position, col_position] = 0;
+                global.board[row_position - 1, col_position] = number_chip;
                 can_move = true;
             }
         }
@@ -100,11 +104,11 @@ public class MoveFragment : MonoBehaviour
 
         try
         {
-            if (Global.board[row_position, col_position + 1] == 0)
+            if (global.board[row_position, col_position + 1] == 0)
             {
-                empty_position = new Vector3(transform.position.x, transform.position.y + CreatePuzzle.split_y, transform.position.z);
-                Global.board[row_position, col_position] = 0;
-                Global.board[row_position, col_position + 1] = number_chip;
+                empty_position = new Vector3(transform.position.x, transform.position.y + createPuzzle.split_y, transform.position.z);
+                global.board[row_position, col_position] = 0;
+                global.board[row_position, col_position + 1] = number_chip;
                 can_move = true;
             }
         }
@@ -112,11 +116,11 @@ public class MoveFragment : MonoBehaviour
 
         try
         {
-            if (Global.board[row_position, col_position - 1] == 0)
+            if (global.board[row_position, col_position - 1] == 0)
             {
-                empty_position = new Vector3(transform.position.x, transform.position.y - CreatePuzzle.split_y, transform.position.z);
-                Global.board[row_position, col_position] = 0;
-                Global.board[row_position, col_position - 1] = number_chip;
+                empty_position = new Vector3(transform.position.x, transform.position.y - createPuzzle.split_y, transform.position.z);
+                global.board[row_position, col_position] = 0;
+                global.board[row_position, col_position - 1] = number_chip;
                 can_move = true;
             }
         }
@@ -128,7 +132,7 @@ public class MoveFragment : MonoBehaviour
         {
             for (int col = 0; col < 4; col++)
             {
-                if (Global.board[row, col] == number_chip)
+                if (global.board[row, col] == number_chip)
                 {
                     row_position = row;
                     col_position = col;

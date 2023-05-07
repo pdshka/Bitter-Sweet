@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     private Stats stats;
+    private PlayerController playerController;
 
     void Start()
     {
         stats = GetComponent<Stats>();
+        playerController = GetComponent<PlayerController>();
     }
 
     void Update()
@@ -26,7 +28,8 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        // TODO: death animation or smth
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        playerController.UseTeleport("97b5e0da-34b0-4bcf-b775-db3aab49e260");
+        stats.health = 3;
+        SceneManager.LoadScene("MainScene");
     }
 }

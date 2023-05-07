@@ -20,8 +20,9 @@ public class Water : MonoBehaviour
         {
             if (player.transform.parent == null)
             {
+                if (player.GetComponent<Stats>().health - damage > 0)
+                    Teleport();
                 player.GetComponent<Stats>().TakeDamage(damage);
-                Teleport();
             }
         }
     }
