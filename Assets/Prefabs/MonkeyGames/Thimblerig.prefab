@@ -808,6 +808,7 @@ MonoBehaviour:
   hint: {fileID: 6805415370913457800}
   TextWin: {fileID: 6805415372382109740}
   Background: {fileID: 21300000, guid: 6bce4aea0ce240348ab2fd16f60b7895, type: 3}
+  monkey: {fileID: 0}
 --- !u!212 &6805415370787062247
 SpriteRenderer:
   m_ObjectHideFlags: 0
