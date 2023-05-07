@@ -551,6 +551,10 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 6581785696529293183, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6581785696898451550, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
       propertyPath: m_SizeDelta.x
       value: 119.2851
@@ -646,6 +650,10 @@ PrefabInstance:
     - target: {fileID: 1360556923929401432, guid: 1e9a76ebf7d67204a8d851e61fed8e13, type: 3}
       propertyPath: m_Name
       value: Vanilla
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360556923929401432, guid: 1e9a76ebf7d67204a8d851e61fed8e13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1360556923929401436, guid: 1e9a76ebf7d67204a8d851e61fed8e13, type: 3}
       propertyPath: id
