@@ -76,5 +76,7 @@ public class GameData
         teleporters.Add("d9eaef3c-bb6e-40b0-a33b-03c1e72372e8", new Vector3(-0.5f, 28.5f, 0)); // WaterTempleBigPipes-WaterTemple
         teleporters.Add("f7b3f114-9b7a-4c6e-bcf3-42e968e40db6", new Vector3(-0.5f, 16.5f, 0)); // WaterTempleToCenter-WaterTempleFromCenter
         teleporters.Add("db4bb778-1043-489b-9849-02a366dc4aa5", new Vector3(-0.5f, 14.5f, 0)); // WaterTempleFromCenter-WaterTempleToCenter
+        teleporters.Add("3017d9b7-2830-4b56-9ade-b29136b50dcc", new Vector3(-10.5f, 0.7f, 0));//JungleSpawn-MoonCave
+        teleporters.Add("742117c8-73c9-4bda-aa3a-1823f5719297", new Vector3( 7.5f, 0.4f, 0));//MoonCave-JungleSpawn
     }
 }
