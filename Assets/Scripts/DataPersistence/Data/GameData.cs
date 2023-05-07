@@ -21,8 +21,8 @@ public class GameData
     // initializing default values
     public GameData()
     {
-        scene = "MainScene";
-        this.playerPosition = Vector3.zero;
+        scene = "CafeHints";
+        this.playerPosition = new Vector3(-4f, 1f, 0);
         this.rayRecieversActivated = new SerializableDictionary<string, bool>();
         SetTeleporters();
         this.teleportersActivated = new SerializableDictionary<string, bool>();
