@@ -35,6 +35,7 @@ public class ShowMessageBox : MonoBehaviour
                 MessageBox.SetActive(false);
                 (i, On, Flag) = (0, false, false);
             }
+            else
             TextElement.text = HintText[++i];
         }
 
