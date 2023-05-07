@@ -11,8 +11,9 @@ public class CreatePuzzle : MonoBehaviour
     public GameObject[] chips = new GameObject[15];
     private Vector3 board_position;
     public float SizeOfBoard = 4.0f;
-    public static float split_x;
-    public static float split_y;
+    public float split_x;
+    public float split_y;
+    public Global global;
     void Start()
     {
         board_position = transform.position;
@@ -28,7 +29,7 @@ public class CreatePuzzle : MonoBehaviour
         }
     }
     const int N = 4;
-    static int getInvCount(int[] arr)
+    int getInvCount(int[] arr)
     {
         int inv_count = 0;
         for (int i = 0; i < N * N - 1; i++)
@@ -42,7 +43,7 @@ public class CreatePuzzle : MonoBehaviour
         }
         return inv_count;
     }
-    static int findXPosition(int[,] puzzle)
+    int findXPosition(int[,] puzzle)
     {
         for (int i = N - 1; i >= 0; i--)
         {
@@ -54,7 +55,7 @@ public class CreatePuzzle : MonoBehaviour
         }
         return -1;
     }
-    static bool isSolvable(int[,] puzzle)
+    bool isSolvable(int[,] puzzle)
     {
         int[] arr = new int[N * N];
         int k = 0;
@@ -87,10 +88,10 @@ public class CreatePuzzle : MonoBehaviour
             {
                 int row = Random.Range(0, 4);
                 int col = Random.Range(0, 4);
-                if (Global.board[row, col] == 0)
+                if (global.board[row, col] == 0)
                 {
                     cancel = true;
-                    Global.board[row, col] = i;
+                    global.board[row, col] = i;
                 }
             } while (!cancel);
         }
@@ -99,18 +100,18 @@ public class CreatePuzzle : MonoBehaviour
     }
     private void CheckShuffle()
     {
-        if (isSolvable(Global.board))
+        if (isSolvable(global.board))
         {
             int i14 = 0, i15 = 0, j14 = 0, j15 = 0;
             for (int i = 0; i < 4; i++)
                 for (int j = 0; j < 4; j++)
                 {
-                    if (Global.board[i, j] == 14)
+                    if (global.board[i, j] == 14)
                         (i14, j14) = (i, j);
-                    if (Global.board[i, j] == 15)
+                    if (global.board[i, j] == 15)
                         (i15, j15) = (i, j);
                 }
-            (Global.board[i14, j14], Global.board[i15, j15]) = (Global.board[i15, j15], Global.board[i14, j14]);
+            (global.board[i14, j14], global.board[i15, j15]) = (global.board[i15, j15], global.board[i14, j14]);
         }
 
     }
@@ -120,7 +121,7 @@ public class CreatePuzzle : MonoBehaviour
         {
             for (int j = 0; j < 4; j++)
             {
-                //Debug.Log($"{Global.board[i, j]} ");
+                //Debug.Log($"{global.board[i, j]} ");
             }
         }
     }
@@ -130,10 +131,10 @@ public class CreatePuzzle : MonoBehaviour
         {
             for (int col = 0; col < 4; col++)
             {
-                if (Global.board[row, col] != 0)
+                if (global.board[row, col] != 0)
                 {
                     Vector3 coordinate = new Vector3(board_position.x + (row - 1.5f) * split_x, board_position.y + (col - 1.5f) * split_y, -0.0000001f);
-                    int chip = Global.board[row, col] - 1;
+                    int chip = global.board[row, col] - 1;
                     chips[chip].transform.position = coordinate;
                     chips[chip].transform.localScale = new Vector3(0.25f, 0.25f);
                 }

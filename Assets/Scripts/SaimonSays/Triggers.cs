@@ -6,7 +6,7 @@ public class Triggers : MonoBehaviour
 {
     private int ActivePallet = 0;
     private int StayIn = 0;
-    public static int PlayerChoise = 100;
+    public int PlayerChoise = 100;
 
     [SerializeField] private SpriteRenderer SpriteObj1;
     [SerializeField] private SpriteRenderer SpriteObj2;

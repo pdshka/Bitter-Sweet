@@ -189,7 +189,7 @@ Transform:
   - {fileID: 1736575484}
   - {fileID: 1323361400}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &451418400
 PrefabInstance:
@@ -4588,6 +4588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263afe857ad52e542bd8737eef5587cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggers: {fileID: 1099226166}
   SpriteObj1: {fileID: 1395944361}
   SpriteObj2: {fileID: 1514094188}
   SpriteObj3: {fileID: 1019780383}
@@ -4609,6 +4610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47eaae1a1ccafa41b08ffa1def583f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerChoise: 100
   SpriteObj1: {fileID: 1395944361}
   SpriteObj2: {fileID: 1514094188}
   SpriteObj3: {fileID: 1019780383}
