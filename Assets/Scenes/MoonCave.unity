@@ -12592,8 +12592,20 @@ PrefabInstance:
       value: "\u0413\u0440\u0438\u0431\u043E\u0447\u0435\u043A"
       objectReference: {fileID: 0}
     - target: {fileID: 6581785696216201231, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696216201231, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696216201328, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581785696216201328, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6581785696216201328, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -12601,7 +12613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6581785696216201328, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 128
+      value: -81.1
       objectReference: {fileID: 0}
     - target: {fileID: 6581785696529293178, guid: 7760d44e309d4154a9f0f796880c0f97, type: 3}
       propertyPath: m_SortingOrder
