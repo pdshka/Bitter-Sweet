@@ -57,9 +57,9 @@ public class Book : MonoBehaviour
     }
     void ChooseLetter(Letters let)
     {
-        letters[(int)color].SetActive(false);
         if (let != color)
         {
+            letters[(int)color].SetActive(false);
             if (color > let)
                 StartCoroutine(Left(let));
             else StartCoroutine(Right(let));
