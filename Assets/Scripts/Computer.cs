@@ -100,7 +100,7 @@ public class Computer : MonoBehaviour, IDataPersistence
     public void OpenCafe()
     {
         customerManager.cafeClosed = false;
-        cafeManagerButton.GetComponentInChildren<TMP_Text>().text = "Закрыть кафе";
+        cafeManagerButton.GetComponentInChildren<TMP_Text>().text = "3акрыть кафе";
         cafeManagerButton.GetComponent<Button>().onClick.RemoveAllListeners();
         cafeManagerButton.GetComponent<Button>().onClick.AddListener(CloseCafe);
     }

@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 7ab044f4-0ee5-4414-b7eb-941850c56ce8
-  lvlName: SmallPipes2
+  lvlCompleted: 0
 --- !u!1 &212149854
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: d34f0027-7ac6-46aa-8480-454bb4214952
-  lvlName: SmallPipes2
+  lvlCompleted: 0
 --- !u!1 &244017952
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 5093b2e4-2649-41cf-8fa6-d920430eda2d
-  lvlName: SmallPipes2
+  lvlCompleted: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 47d85dce-c2a8-4d60-9e0c-b35d2602c0f7
-  lvlName: SmallPipes2
+  lvlCompleted: 0
 --- !u!1 &586187600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: cc8e2f38-1ca7-4d79-a202-a6a568e7f018
-  lvlName: SmallPipes2
+  lvlCompleted: 0
 --- !u!1 &591283220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,7 +2284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 317127f0-d7c0-45e2-9798-937e9e948f72
-  lvlName: SmallPipes2
+  lvlCompleted: 0
 --- !u!1 &916888084 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3394511358892716980, guid: 889087a8da4f4e64a96a6ac910f993e7, type: 3}
@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0f83b44e-87c6-40a3-b66e-0f68d224b270
-  lvlName: SmallPipes2
+  lvlCompleted: 0
 --- !u!1 &1572546574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,7 +2740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4b653dd9-b501-4100-b447-eeb7eb8bb34b
-  lvlName: SmallPipes2
+  lvlCompleted: 0
 --- !u!1 &1755050469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2809,6 +2809,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1820617684
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 449835635451392171, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_Name
+      value: Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
 --- !u!1 &1909205607
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,4 +3883,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: d97ea128-aeb7-4dea-9690-a1c92fa6c72d
-  lvlName: SmallPipes2
+  lvlCompleted: 0
