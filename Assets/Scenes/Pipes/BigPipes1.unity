@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 13a30b96-35a5-4be6-8912-096da50676ae
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &11832999
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: f00e5560-0b9c-4f3b-927a-12d3303d1655
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &43478110
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3c8feca3-9ef7-4f44-9a11-dc85f65ac9f7
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1001 &96910529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 57424ac2-2bef-4f74-ba5b-eabf32c45957
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &511203254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,7 +1737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 134973e8-6fc7-4b31-93da-f8c024de9c7d
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1258b380-a3d5-4920-9919-b0ab27d6770a
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &567536671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: d1aec549-044d-4c69-ad73-b27f9b18def1
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &645009281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,7 +2388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: e3081e4e-b2a2-41da-b751-57a6da3a706b
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1001 &664360021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3299,7 +3299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 38a5cc6a-f153-4114-88b7-4bb6ad53ca61
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &821888500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3446,7 +3446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3a1cbdf2-ec75-42e9-9f0e-6cf73b673462
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1001 &833607214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3602,6 +3602,63 @@ MonoBehaviour:
   - {fileID: 511203254}
   - {fileID: 1615688826}
   finish: {fileID: 2035916660}
+--- !u!1001 &1345829794
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 449835635451392171, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_Name
+      value: Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449835635451392180, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e5aa8b57c6c6fc42be5d9efde025364, type: 3}
 --- !u!1 &1423221744
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,7 +3922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: e305bafb-7e0f-440c-8dfe-839949d0c323
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &1775568550
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,7 +4069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 8e8cf801-3abf-4c78-9908-abc51b45c609
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &1781542804
 GameObject:
   m_ObjectHideFlags: 0
@@ -4159,7 +4216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 75946606-4b5e-45dd-bf04-b00dae4f0c37
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &1896773218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4306,7 +4363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: dbb82088-a078-4fa4-a91f-bf8c96c0a28e
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1 &1910293883
 GameObject:
   m_ObjectHideFlags: 0
@@ -4453,7 +4510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 7afeb6b9-598f-495d-8300-ffac2b7f7f47
-  lvlName: BigPipes1
+  lvlCompleted: 0
 --- !u!1001 &1959695249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4767,4 +4824,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 99be5144-9ea1-4cb4-ae10-7659698efbd6
-  lvlName: BigPipes1
+  lvlCompleted: 0
