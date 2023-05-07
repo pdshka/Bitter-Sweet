@@ -23,7 +23,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Multiple Data Persistence Managers found! Destroying the newest one.");
+            Debug.LogWarning("Multiple Data Persistence Managers found! Destroying the newest one.");
             Destroy(this.gameObject);
             return;
         }
