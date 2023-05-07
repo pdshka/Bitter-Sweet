@@ -24,6 +24,14 @@ public class ShowMessageBox : MonoBehaviour
     private bool Flag;
     private int i = 0;
 
+    private Stats playerStats;
+    private float speed;
+
+    private void Start()
+    {
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>();
+        speed = playerStats.speed;
+    }
 
     void Update()
     {
@@ -32,11 +40,14 @@ public class ShowMessageBox : MonoBehaviour
         {
             if (i == HintText.Length - 1)
             {
+                playerStats.speed = speed;
                 MessageBox.SetActive(false);
                 (i, On, Flag) = (0, false, false);
             }
             else
-            TextElement.text = HintText[++i];
+            {
+                TextElement.text = HintText[++i];
+            }
         }
 
         if (On && Input.GetKeyDown(KeyCode.Q) && i - 1 >= 0)
@@ -77,5 +88,6 @@ public class ShowMessageBox : MonoBehaviour
         TextElement.text = HintText[0];
         MessageBox.SetActive(true);
         On = true;
+        playerStats.speed = 0;
     }
 }
